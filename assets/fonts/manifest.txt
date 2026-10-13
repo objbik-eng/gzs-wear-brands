@@ -1,0 +1,5 @@
+fraunces-italic-400-900.woff2
+fraunces-normal-400-900.woff2
+inter-normal-300-700.woff2
+spacemono-normal-400.woff2
+spacemono-normal-700.woff2

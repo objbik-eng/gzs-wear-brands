@@ -1,0 +1,778 @@
+{
+  "collection": "Colección 001",
+  "categories": [
+    "Camisetas",
+    "Oversize",
+    "Sudaderas",
+    "Accesorios"
+  ],
+  "products": [
+    {
+      "id": "6ace50f8a760e000a20a564a",
+      "slug": "tee-calm-is-confidence",
+      "name": "Calm Is Confidence Tee",
+      "cat": "Camisetas",
+      "badge": "",
+      "desc": "La calma como declaración. Camiseta garment-dyed con el lema CALM IS CONFIDENCE en tipografía display.",
+      "feats": [
+        "Algodón 100% garment-dyed",
+        "Estampado minimal centrado",
+        "Corte unisex",
+        "Paleta terra"
+      ],
+      "tags": [
+        "Frase",
+        "Garment Dyed",
+        "Unisex",
+        "Calma"
+      ],
+      "price": 27.63,
+      "priceMax": 39.34,
+      "colors": [
+        "Black"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "images": [
+        "assets/img/products/tee-calm-is-confidence-1.webp",
+        "assets/img/products/tee-calm-is-confidence-2.webp",
+        "assets/img/products/tee-calm-is-confidence-3.webp"
+      ],
+      "printifyTitle": "Minimalist 'Calm Is Confidence' Graphic T-Shirt",
+      "blueprint": "Unisex Garment-Dyed T-shirt",
+      "provider": "Monster Digital",
+      "descOriginal": "&nbsp; \n S \n M \n L \n XL \n 2XL \n 3XL \n 4XL \n \n \n \n \n Width, in \n 18.25 \n 20.25 \n 22.00 \n 24.00 \n 26.00 \n 27.75 \n 29.75 \n \n \n Length, in \n 26.62 \n 28.00 \n 29.37 \n 30.75 \n 31.62 \n 32.50 \n 33.50 \n \n \n Sleeve length from center back, in \n 16.25 \n 17.75 \n 19.00 \n 20.50 \n 21.75 \n 23.25 \n 24.63 \n \n \n Size tolerance, in \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n \n \n \n This garment-dyed tee carries a quiet, artful tension. The front&rsquo;s distressed, glitch-like typography and the back&rsquo;s bold, abstract block mark work together like a small visual poem &mdash; subtle from a distance, inte",
+      "colorsUI": [
+        {
+          "name": "Negro",
+          "hex": "#1a1a1a",
+          "raw": "Black"
+        }
+      ]
+    },
+    {
+      "id": "6ace50f6a760e000a20a5649",
+      "slug": "tee-focused-present-free",
+      "name": "Focused • Present • Free",
+      "cat": "Camisetas",
+      "badge": "",
+      "desc": "Tres palabras, tres estados. Camiseta garment-dyed con el mantra de la colección estampado en el pecho.",
+      "feats": [
+        "Algodón 100% garment-dyed",
+        "Tipografía display característica",
+        "Corte unisex",
+        "Color lavado natural"
+      ],
+      "tags": [
+        "Mantra",
+        "Garment Dyed",
+        "Unisex",
+        "Icono"
+      ],
+      "price": 27.63,
+      "priceMax": 39.34,
+      "colors": [
+        "Ivory"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "images": [
+        "assets/img/products/tee-focused-present-free-1.webp",
+        "assets/img/products/tee-focused-present-free-2.webp",
+        "assets/img/products/tee-focused-present-free-3.webp"
+      ],
+      "printifyTitle": "Focused • Present • Free T-Shirt — Minimalist Mindfulness Tee",
+      "blueprint": "Unisex Garment-Dyed T-shirt",
+      "provider": "Monster Digital",
+      "descOriginal": "Soft, breathable, and quietly confident — this garment-dyed tee wears like your favorite weekend ritual. The relaxed fit and medium-weight 100% ring-spun cotton drape easily, while the after-dye finish gives the fabric a lived-in color and supple hand. Front text whispers 'FOCUSED PRESENT FREE' in clean outline lettering; the back features a minimal, geometric emblem in warm, earthy tones. Wear it on slow mornings with coffee, on trail-side breaks, or at low-key meetups where comfort and calm matter more than flash. The sewn-in label and double-needle stitching mean this shirt will age gracefu",
+      "colorsUI": [
+        {
+          "name": "Marfil",
+          "hex": "#ece4d4",
+          "raw": "Ivory"
+        }
+      ]
+    },
+    {
+      "id": "6ace50f1a760e000a20a5646",
+      "slug": "tee-less-but-better",
+      "name": "Less But Better Tee",
+      "cat": "Camisetas",
+      "badge": "",
+      "desc": "Camiseta garment-dyed de algodón pesado con el lema LESS BUT BETTER serigrafiado. Algodón teñido en prenda: cada unidad tiene un tono ligeramente único.",
+      "feats": [
+        "Algodón 100% garment-dyed 205 g",
+        "Estampado serigrafiado frente pantalla completa",
+        "Cuello reforzado con cinta interior",
+        "Corte unisex relajado"
+      ],
+      "tags": [
+        "Garment Dyed",
+        "Minimal",
+        "Unisex",
+        "Icono"
+      ],
+      "price": 27.63,
+      "priceMax": 39.34,
+      "colors": [
+        "White"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL"
+      ],
+      "images": [
+        "assets/img/products/tee-less-but-better-1.webp",
+        "assets/img/products/tee-less-but-better-2.webp",
+        "assets/img/products/tee-less-but-better-3.webp"
+      ],
+      "printifyTitle": "Less but Better T-Shirt — Minimalist Graphic Tee",
+      "blueprint": "Unisex Garment-Dyed T-shirt",
+      "provider": "Monster Digital",
+      "descOriginal": "A relaxed, garment-dyed tee that speaks quietly but clearly: less noise, more intention. Soft, broken-in cotton drapes easily over shoulders and settles into a lived-in silhouette. The front carries a subtle, modern wordmark while the back features a small, abstract organic shape — simple visuals that let the wearer move through crowded days with a calm, considered presence. Wear it on slow mornings with coffee, layered under a jacket for market runs, or paired with jeans for long walks where the point is to notice small things. It’s for people who prefer restraint over excess, texture over fl",
+      "colorsUI": [
+        {
+          "name": "Blanco",
+          "hex": "#f2efe9",
+          "raw": "White"
+        }
+      ]
+    },
+    {
+      "id": "6ace50ee29af0fb9050dc2c3",
+      "slug": "tee-new-classic",
+      "name": "The New Classic Tee",
+      "cat": "Camisetas",
+      "badge": "",
+      "desc": "Serigrafía 'The New Classic' en script retro con trazo rosa. Un clásico instantáneo sobre algodón pesado, para llevar a diario sin pensar.",
+      "feats": [
+        "Algodón 100% 205 g",
+        "Gráfico retro en script",
+        "Etiqueta tejida GZS",
+        "Corte unisex"
+      ],
+      "tags": [
+        "Retro",
+        "Script",
+        "Unisex",
+        "Essentials"
+      ],
+      "price": 26.42,
+      "priceMax": 30.18,
+      "colors": [
+        "Sand"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "assets/img/products/tee-new-classic-1.webp",
+        "assets/img/products/tee-new-classic-2.webp",
+        "assets/img/products/tee-new-classic-3.webp",
+        "assets/img/products/tee-new-classic-4.webp",
+        "assets/img/products/tee-new-classic-5.webp"
+      ],
+      "printifyTitle": "Graphic Tee — \"The New Classic\" Retro Script Tee with Pink X Brushback",
+      "blueprint": "Unisex Heavy Cotton Tee",
+      "provider": "OPT OnDemand",
+      "descOriginal": "This soft, classic-fit tee carries a quiet, nostalgic energy. Gentle script on the chest reads like a tucked-away note, while the back holds a bold brushstroke crossed with a hand-painted X — a little rebellious, a little wistful. The neutral, slightly flecked Natural fabric feels lived-in from the first wear and tones down the graphic so it reads like part of your everyday wardrobe. Wear it on slow mornings with coffee, at gallery openings, or layered under a jacket for nights out when you want a subtle statement rather than a shout. It moves with you, keeps its shape, and lets the artwork do",
+      "colorsUI": [
+        {
+          "name": "Arena",
+          "hex": "#d9c7a8",
+          "raw": "Sand"
+        }
+      ]
+    },
+    {
+      "id": "6ace5180a760e000a20a5657",
+      "slug": "tee-lets-play",
+      "name": "Let's Play Oversized",
+      "cat": "Oversize",
+      "badge": "Nuevo",
+      "desc": "Oversize con gráfico floral-bar minimal y backprint 'Let's Play'. La definición de la colección: seria en la forma, juguetona en el fondo.",
+      "feats": [
+        "Algodón pesado 220 g",
+        "Gráfico frontal + backprint",
+        "Corte oversize",
+        "Edición Colección 001"
+      ],
+      "tags": [
+        "Oversize",
+        "Backprint",
+        "Floral",
+        "Unisex"
+      ],
+      "price": 37.54,
+      "priceMax": 37.54,
+      "colors": [
+        "Blanc White"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+      ],
+      "images": [
+        "assets/img/products/tee-lets-play-1.webp",
+        "assets/img/products/tee-lets-play-2.webp",
+        "assets/img/products/tee-lets-play-3.webp",
+        "assets/img/products/tee-lets-play-4.webp",
+        "assets/img/products/tee-lets-play-5.webp"
+      ],
+      "printifyTitle": "Oversized Tee — Minimal Floral Bar Graphic with “Let’s Play” Backprint",
+      "blueprint": "Unisex Heavy Oversize Tee",
+      "provider": "Textildruck Europa",
+      "descOriginal": "This heavy oversize tee brings relaxed streetwear energy with a quiet, artful edge. Thick, 100% cotton feels substantial and structured, letting the dropped shoulders and wide cut hang just right — roomy but deliberate. The front shows three bold vertical panels, each framing a monochrome floral motif that reads like a framed moment; the back carries a playful “Let’s Play” in green script that adds a wink of personality. Wear it to slow afternoons at a café, late-night gallery runs, or city walks when you want to blend comfort with a thoughtful, designer touch. It layers easily under jackets o",
+      "colorsUI": [
+        {
+          "name": "Blanco",
+          "hex": "#f2efe9",
+          "raw": "Blanc White"
+        }
+      ]
+    },
+    {
+      "id": "6ace517fa760e000a20a5656",
+      "slug": "tee-minimal-minded",
+      "name": "Minimal Minded Oversized",
+      "cat": "Oversize",
+      "badge": "",
+      "desc": "Oversize lila con logo GZS rosa en el pecho y espalda gráfica. El equilibrio perfecto entre minimalismo y color.",
+      "feats": [
+        "Algodón pesado 220 g",
+        "Corte oversize unisex",
+        "Logo rosa frente",
+        "Gráfico espalda"
+      ],
+      "tags": [
+        "Oversize",
+        "Lila",
+        "Logo",
+        "Unisex"
+      ],
+      "price": 37.54,
+      "priceMax": 38.97,
+      "colors": [
+        "Lilac"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "assets/img/products/tee-minimal-minded-1.webp",
+        "assets/img/products/tee-minimal-minded-2.webp"
+      ],
+      "printifyTitle": "Minimal Minded Oversize Tee — Minimal Graphic Pink Logo T-Shirt",
+      "blueprint": "Unisex Heavy Oversize Tee",
+      "provider": "Textildruck Europa",
+      "descOriginal": "Soft lavender cotton with a quiet, confident edge. This heavy-weight tee wears like a relaxed statement—wide-cut shoulders and a dropped-sleeve silhouette that drapes loose without feeling sloppy. The front carries a simple, handwritten-style “Minimal minded” in warm rose, while the back shows an abstract floral burst in the same hue. Wear it on slow mornings, city strolls, or when you want your outfit to whisper rather than shout. Feels substantial, sits comfortably over jeans or layered under an open jacket, and grows into the kind of shirt you reach for again and again.  Product features - ",
+      "colorsUI": [
+        {
+          "name": "Lila",
+          "hex": "#c9bbd8",
+          "raw": "Lilac"
+        }
+      ]
+    },
+    {
+      "id": "6ace50ef29af0fb9050dc2c4",
+      "slug": "tee-wavy-crest",
+      "name": "Wavy Crest Oversized",
+      "cat": "Oversize",
+      "badge": "",
+      "desc": "Camiseta oversize en verde oliva con gráfico wavy 'Made in Nature'. Hombrera caída y caída larga: la silueta del momento.",
+      "feats": [
+        "Algodón pesado 220 g",
+        "Corte oversize de hombro caído",
+        "Gráfico serigrafiado 'Made in Nature'",
+        "Corte unisex"
+      ],
+      "tags": [
+        "Oversize",
+        "Verde oliva",
+        "Nature",
+        "Unisex"
+      ],
+      "price": 37.54,
+      "priceMax": 38.97,
+      "colors": [
+        "Olive"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "assets/img/products/tee-wavy-crest-1.webp",
+        "assets/img/products/tee-wavy-crest-2.webp",
+        "assets/img/products/tee-wavy-crest-3.webp",
+        "assets/img/products/tee-wavy-crest-4.webp",
+        "assets/img/products/tee-wavy-crest-5.webp"
+      ],
+      "printifyTitle": "Wavy Crest Oversized Tee — Olive Graphic T-Shirt with 'Made in Nature' Vibe",
+      "blueprint": "Unisex Heavy Oversize Tee",
+      "provider": "Textildruck Europa",
+      "descOriginal": "A heavy, laidback tee that carries a quiet, outdoorsy vibe. The olive canvas and muted teal graphics feel like late-afternoon light on a lakeshore—calm, collected, and a little nostalgic. The front shows a minimalist wave motif inside a square, while a small crest sits high on the back, giving the shirt a subtle, crafted identity. It sits roomy across the shoulders with dropped sleeves so you can move freely on hikes, around campfires, or while running errands. This is the kind of shirt you reach for when you want comfort without shouting for attention—warm tones, sturdy fabric, and a relaxed ",
+      "colorsUI": [
+        {
+          "name": "Oliva",
+          "hex": "#6b6b4a",
+          "raw": "Olive"
+        }
+      ]
+    },
+    {
+      "id": "6ace50ec29af0fb9050dc2c2",
+      "slug": "hoodie-question-mark",
+      "name": "?! Question Mark Hoodie",
+      "cat": "Sudaderas",
+      "badge": "Nuevo",
+      "desc": "Sudadera con capucha de algodón y poliéster con el icónico '?!' de la colección. Estética minimalista con actitud: duda, afirmación y punto.",
+      "feats": [
+        "Mix algodón/poliéster 275 g",
+        "Capucha con cordón a tono",
+        "Estampado frente y espalda",
+        "Bolsillo canguro"
+      ],
+      "tags": [
+        "Hoodie",
+        "Statement",
+        "Unisex",
+        "Colección 001"
+      ],
+      "price": 43.16,
+      "priceMax": 48.87,
+      "colors": [
+        "Red"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "assets/img/products/hoodie-question-mark-1.webp",
+        "assets/img/products/hoodie-question-mark-2.webp",
+        "assets/img/products/hoodie-question-mark-3.webp",
+        "assets/img/products/hoodie-question-mark-4.webp",
+        "assets/img/products/hoodie-question-mark-5.webp"
+      ],
+      "printifyTitle": "Question Mark Graphic Hoodie — Cute Minimalist ?! Logo Pullover",
+      "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+      "provider": "Monster Digital",
+      "descOriginal": "This soft, mid-weight hoodie blends relaxed comfort with playful graphic energy. The front shows an abstract, paint‑splotch motif that reveals a hidden word, while the back carries a small logo panel and a quirky “?!” mark with tiny heart accents — an artful mix of mystery and charm. The roomy kangaroo pocket and double-lined hood make it feel lived‑in from the first wear. Wear it on cool mornings walking the city, at low-key meetups, or when you want something cozy that still reads creative and thoughtful.  Product features - 50/50 cotton-poly blend for warmth and printing clarity - Spacious ",
+      "colorsUI": [
+        {
+          "name": "Rojo",
+          "hex": "#a3392f",
+          "raw": "Red"
+        }
+      ]
+    },
+    {
+      "id": "6ace50f0a760e000a20a5645",
+      "slug": "sweatshirt-breathe",
+      "name": "Breathe Crewneck",
+      "cat": "Sudaderas",
+      "badge": "",
+      "desc": "Crewneck en tonos pastel con el mensaje BREATHE. Pensada para el reset diario: suave, cálida y sin ruido.",
+      "feats": [
+        "Algodón/poliéster cepillado",
+        "Gráfico minimal 'Breathe'",
+        "Corte unisex",
+        "Costuras reforzadas"
+      ],
+      "tags": [
+        "Crewneck",
+        "Pastel",
+        "Calma",
+        "Unisex"
+      ],
+      "price": 34.0,
+      "priceMax": 39.53,
+      "colors": [
+        "Light Blue"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "images": [
+        "assets/img/products/sweatshirt-breathe-1.webp",
+        "assets/img/products/sweatshirt-breathe-2.webp",
+        "assets/img/products/sweatshirt-breathe-3.webp",
+        "assets/img/products/sweatshirt-breathe-4.webp",
+        "assets/img/products/sweatshirt-breathe-5.webp"
+      ],
+      "printifyTitle": "Breathe Crewneck Sweatshirt — Calm Pastel Pullover for Relaxation & Self-Care",
+      "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+      "provider": "Monster Digital",
+      "descOriginal": "Soft, airy, and quietly confident — this crewneck slips into your routine like a calm breath. The pale sky-blue fabric and minimalist typography create a gentle, modern vibe: a small, framed \"Breathe\" mark on the chest and a soft, repeated “Basics” motif across the back. It reads like slow mornings, weekend walks, and coffee sipped while planning the day. Built with midweight cotton-poly for structure and easy layering, the sweatshirt keeps its shape with ribbed collar and double-needle stitching, while tear-away labeling prevents irritation. Subtle enough for everyday wear, it’s the kind of p",
+      "colorsUI": [
+        {
+          "name": "Azul claro",
+          "hex": "#a9c4d6",
+          "raw": "Light Blue"
+        }
+      ]
+    },
+    {
+      "id": "6ace50eb29af0fb9050dc2c1",
+      "slug": "hoodie-gzs-logo",
+      "name": "GZS Logo Hoodie",
+      "cat": "Sudaderas",
+      "badge": "Best Seller",
+      "desc": "Hoodie en verde militar con el logo GZS minimal al pecho. La pieza central de la Colección 001.",
+      "feats": [
+        "Algodón/poliéster 275 g",
+        "Logo GZS bordado/serigrafiado",
+        "Capucha doble",
+        "Bolsillo canguro"
+      ],
+      "tags": [
+        "Hoodie",
+        "Logo",
+        "Verde militar",
+        "Icono"
+      ],
+      "price": 43.16,
+      "priceMax": 48.87,
+      "colors": [
+        "Military Green"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "assets/img/products/hoodie-gzs-logo-1.webp",
+        "assets/img/products/hoodie-gzs-logo-2.webp",
+        "assets/img/products/hoodie-gzs-logo-3.webp",
+        "assets/img/products/hoodie-gzs-logo-4.webp"
+      ],
+      "printifyTitle": "GZS Minimal Logo Hoodie – Neutral Streetwear Pullover",
+      "blueprint": "Unisex Heavy Blend™ Hooded Sweatshirt",
+      "provider": "Monster Digital",
+      "descOriginal": "&nbsp; \n S \n M \n L \n XL \n 2XL \n 3XL \n 4XL \n 5XL \n \n \n \n \n Width, in \n 20.08 \n 22.05 \n 24.02 \n 25.98 \n 27.99 \n 29.92 \n 31.89 \n 33.86 \n \n \n Length, in \n 27.17 \n 27.95 \n 29.13 \n 29.92 \n 31.10 \n 31.89 \n 33.07 \n 33.86 \n \n \n Sleeve length from center back, in \n 33.50 \n 34.50 \n 35.50 \n 36.50 \n 37.50 \n 38.50 \n 39.50 \n 40.50 \n \n \n Size tolerance, in \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n 1.50 \n \n \n \n This soft, medium-weight hooded sweatshirt wraps you in quiet comfort and effortless style. The clean, sand tone creates a calm, versatile canvas while the subtle centered graphic gives a moder",
+      "colorsUI": [
+        {
+          "name": "Verde militar",
+          "hex": "#4d5340",
+          "raw": "Military Green"
+        }
+      ]
+    },
+    {
+      "id": "6ace50f4a760e000a20a5648",
+      "slug": "sweatshirt-less-noise",
+      "name": "Less Noise Crewneck",
+      "cat": "Sudaderas",
+      "badge": "Best Seller",
+      "desc": "Sudadera crewneck con gráfico minimal en el frente y 'Less Noise, More You' en la espalda. Algodón y poliéster cepillado por dentro.",
+      "feats": [
+        "Algodón/poliéster 275 g",
+        "Cepillado interior suave",
+        "Estampado frente + espalda",
+        "Puños y bajo elásticos a tono"
+      ],
+      "tags": [
+        "Crewneck",
+        "Backprint",
+        "Unisex",
+        "Statement"
+      ],
+      "price": 34.91,
+      "priceMax": 40.81,
+      "colors": [
+        "Safety Orange"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL"
+      ],
+      "images": [
+        "assets/img/products/sweatshirt-less-noise-1.webp",
+        "assets/img/products/sweatshirt-less-noise-2.webp",
+        "assets/img/products/sweatshirt-less-noise-3.webp",
+        "assets/img/products/sweatshirt-less-noise-4.webp",
+        "assets/img/products/sweatshirt-less-noise-5.webp"
+      ],
+      "printifyTitle": "Crewneck Sweatshirt — Minimal Graphic Front & \"Less Noise, More You\" Back",
+      "blueprint": "Unisex Heavy Blend™ Crewneck Sweatshirt",
+      "provider": "Printify Choice",
+      "descOriginal": "This crewneck sweatshirt carries a calm, intentional vibe — clean graphics on a warm orange base, quiet messaging across the back: “Less Noise, More You.” It feels like a wearable pause: roomy enough to settle into, sturdy enough to keep returning to. Soft mid-weight cotton/poly keeps things cozy without bulk. Subtle branded marks at the chest and a bold, stenciled phrase on the back give it an artful, slightly underground look that pairs with jeans, layered streetwear, or a relaxed work-from-home rotation. Wear it when you want to turn down the static and move through the day with a little mo",
+      "colorsUI": [
+        {
+          "name": "Naranja",
+          "hex": "#d96b2f",
+          "raw": "Safety Orange"
+        }
+      ]
+    },
+    {
+      "id": "6ace50f9a760e000a20a564b",
+      "slug": "cap-balance",
+      "name": "Balance Cap",
+      "cat": "Accesorios",
+      "badge": "",
+      "desc": "Gorra low-profile en tono caqui con bordado 'Balance'. Visera curva, ajuste discreto y un recordatorio para el día a día.",
+      "feats": [
+        "Bordado 'Balance' 3D",
+        "Perfil bajo 6 paneles",
+        "Cierre ajustable",
+        "Talla única"
+      ],
+      "tags": [
+        "Gorra",
+        "Bordado",
+        "Mindfulness",
+        "Unisex"
+      ],
+      "price": 20.27,
+      "priceMax": 20.27,
+      "colors": [
+        "Khaki"
+      ],
+      "sizes": [
+        "One size"
+      ],
+      "images": [
+        "assets/img/products/cap-balance-1.webp",
+        "assets/img/products/cap-balance-2.webp",
+        "assets/img/products/cap-balance-3.webp"
+      ],
+      "printifyTitle": "Balance Embroidered Baseball Cap — Casual Low-Profile Tan Hat for Mindfulness & Everyday Wear",
+      "blueprint": "Low Profile Baseball Cap",
+      "provider": "Duplium",
+      "descOriginal": "Lightweight and low-profile, this cotton baseball cap brings quiet confidence to everyday wear. Soft, unstructured panels sit close to the head for a relaxed silhouette that layers easily under jackets or pairs with morning coffee runs. The warm, sand-toned fabric and subtle “Balance” script feel calm and intentional — a small reminder to slow down and steady your pace. Reinforced interior seams and a Velcro® back make it dependable through daily commutes, outdoor strolls, and long weekends when comfort matters more than flash. Wear it pulled low on windy days or tipped back for sunny afternoo",
+      "colorsUI": [
+        {
+          "name": "Caqui",
+          "hex": "#b3a077",
+          "raw": "Khaki"
+        }
+      ]
+    },
+    {
+      "id": "6ace50f3a760e000a20a5647",
+      "slug": "beanie-gzs-wear",
+      "name": "Beanie GZS Embroidered",
+      "cat": "Accesorios",
+      "badge": "Best Seller",
+      "desc": "Gorro de punto acanalado en negro con el logotipo GZS bordado en el frente. La pieza de invierno de la Colección 001: sobria, cálida y atemporal.",
+      "feats": [
+        "Punto acanalado premium",
+        "Bordado GZS tono sobre tono",
+        "Talla única · unisex",
+        "Interior suave al tacto"
+      ],
+      "tags": [
+        "Invierno",
+        "Bordado",
+        "Unisex",
+        "Essentials"
+      ],
+      "price": 21.13,
+      "priceMax": 21.13,
+      "colors": [
+        "Dark Grey"
+      ],
+      "sizes": [
+        "One size"
+      ],
+      "images": [
+        "assets/img/products/beanie-gzs-wear-1.webp",
+        "assets/img/products/beanie-gzs-wear-2.webp",
+        "assets/img/products/beanie-gzs-wear-3.webp",
+        "assets/img/products/beanie-gzs-wear-4.webp",
+        "assets/img/products/beanie-gzs-wear-5.webp"
+      ],
+      "printifyTitle": "Embroidered 'GZS Wear' Cuffed Beanie — Black Knit Winter Hat",
+      "blueprint": "Classic Cuffed Beanie (Embroidery)",
+      "provider": "Printful",
+      "descOriginal": "This classic cuffed beanie combines lived-in simplicity with subtle edge. The 12\" cuff offers a clean canvas for the embroidered logo, sitting low and snug over the brow for warmth without bulk. Soft turbo acrylic keeps the knit light yet insulating, while hypoallergenic fibers mean stretch-and-wear comfort for sensitive skin. It lands easily between street-ready and workday practical — the kind of beanie you grab on a chilly commute, toss into a skate bag, or pull down for late-night gigs. The embroidered mark adds personality that ages well; it reads as understated, intentional, and a little",
+      "colorsUI": [
+        {
+          "name": "Gris oscuro",
+          "hex": "#4b4b4b",
+          "raw": "Dark Grey"
+        }
+      ]
+    },
+    {
+      "id": "6ace50f0a760e000a20a5644",
+      "slug": "cap-presence",
+      "name": "Presence Cap",
+      "cat": "Accesorios",
+      "badge": "",
+      "desc": "Gorra en azul marino con el script 'Presence' bordado. Perfil bajo, visera curva y presencia silenciosa.",
+      "feats": [
+        "Bordado script 'Presence'",
+        "Perfil bajo 6 paneles",
+        "Cierre ajustable",
+        "Talla única"
+      ],
+      "tags": [
+        "Gorra",
+        "Script",
+        "Unisex",
+        "Mindfulness"
+      ],
+      "price": 20.27,
+      "priceMax": 20.27,
+      "colors": [
+        "Dark Navy"
+      ],
+      "sizes": [
+        "One size"
+      ],
+      "images": [
+        "assets/img/products/cap-presence-1.webp",
+        "assets/img/products/cap-presence-2.webp"
+      ],
+      "printifyTitle": "Presence Embroidered Baseball Cap — Minimal Script Dad Hat",
+      "blueprint": "Low Profile Baseball Cap",
+      "provider": "Duplium",
+      "descOriginal": "A low-profile cotton cap that speaks quietly but confidently. The unstructured crown and soft twill give it a lived-in, comfortable feel — the kind of hat you reach for on early morning walks, slow coffee runs, or when you want a simple statement without shouting. The subtle front script sits low on the forehead, keeping the silhouette clean and understated. Lightweight and breathable, it molds to your head over time, becoming part of your everyday rhythm. Wear it while wandering city streets, running errands, or meeting friends for a weekend brunch — it blends with casual routines and mindful",
+      "colorsUI": [
+        {
+          "name": "Azul marino",
+          "hex": "#2c3a52",
+          "raw": "Dark Navy"
+        }
+      ]
+    },
+    {
+      "id": "6ace517e92bd2dc61904e332",
+      "slug": "tote-urban-calm",
+      "name": "Urban Calm Tote",
+      "cat": "Accesorios",
+      "badge": "",
+      "desc": "Tote bag de lona con estampado integral floral-urbano en marrón. Tu compañera diaria: mercado, gym, oficina o viajes cortos.",
+      "feats": [
+        "Lona 100% algodón con impresión AOP",
+        "Asas reforzadas",
+        "Capacidad 10 L",
+        "Estampado all-over"
+      ],
+      "tags": [
+        "Tote",
+        "AOP",
+        "Unisex",
+        "Diario"
+      ],
+      "price": 17.69,
+      "priceMax": 17.69,
+      "colors": [
+        "Black",
+        "Red",
+        "White",
+        "Beige",
+        "Navy"
+      ],
+      "sizes": [
+        "33×33 in"
+      ],
+      "images": [
+        "assets/img/products/tote-urban-calm-1.webp",
+        "assets/img/products/tote-urban-calm-2.webp",
+        "assets/img/products/tote-urban-calm-3.webp",
+        "assets/img/products/tote-urban-calm-4.webp"
+      ],
+      "printifyTitle": "Urban Calm Brown AOP Tote Bag — Minimalist Floral Star Graphic",
+      "blueprint": "Tote Bag (AOP)",
+      "provider": "MWW On Demand",
+      "descOriginal": "This sturdy tote brings a calm, quiet mood to busy city days. The warm chocolate background and soft cream lettering read “URBAN CALM,” while the abstract cream blossom on the reverse adds a gentle, modern accent. It feels like a slow breath between errands — roomy enough for a laptop or market haul, built to keep its shape and carry weight without sagging. The black cotton handles and reinforced stitching give confidence when you sling it on, and the boxed corners create thoughtful volume so items settle neatly. Carry it to coffee dates, studio sessions, or weekend markets as a subtle stateme",
+      "colorsUI": [
+        {
+          "name": "Negro",
+          "hex": "#1a1a1a",
+          "raw": "Black"
+        },
+        {
+          "name": "Rojo",
+          "hex": "#a3392f",
+          "raw": "Red"
+        },
+        {
+          "name": "Blanco",
+          "hex": "#f2efe9",
+          "raw": "White"
+        },
+        {
+          "name": "Beige",
+          "hex": "#d6c9b4",
+          "raw": "Beige"
+        },
+        {
+          "name": "Azul marino",
+          "hex": "#2c3a52",
+          "raw": "Navy"
+        }
+      ]
+    }
+  ]
+}

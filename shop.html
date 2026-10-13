@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tienda — GZS WEAR BRANDS</title>
+<meta name="description" content="Toda la Colección 001 de GZS WEAR BRANDS: camisetas, oversize, sudaderas y accesorios impresos bajo demanda en Europa.">
+<meta property="og:title" content="Tienda — GZS WEAR BRANDS">
+<meta property="og:image" content="assets/img/campaign/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2317140F'/><text x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23F1EBE1' text-anchor='middle'>G</text></svg>">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="shop" data-nav="shop">
+
+<a class="skip" href="#main">Saltar al contenido</a>
+<div id="site-header-root"></div>
+
+<main id="main">
+  <section class="section--tight wrap">
+    <div class="between reveal">
+      <div>
+        <span class="eyebrow">Tienda</span>
+        <h1 class="display mt-1" style="font-size:clamp(44px,7vw,110px)">Colección <em style="color:var(--clay)">001</em></h1>
+      </div>
+      <p class="muted" style="max-width:44ch">15 piezas pensadas para combinarse entre sí. Impresión bajo demanda en la UE: tu pedido se fabrica cuando lo pides.</p>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-bottom:clamp(56px,8vw,120px)">
+    <div class="toolbar reveal">
+      <div class="chips" id="cat-chips" role="group" aria-label="Filtrar por categoría"></div>
+      <div class="flex">
+        <label class="field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="shop-search" type="search" placeholder="Buscar: oversize, hoodie, gorro…" aria-label="Buscar productos">
+        </label>
+        <select class="select" id="shop-sort" aria-label="Ordenar">
+          <option value="relevancia">Relevancia</option>
+          <option value="novedades">Novedades</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="between mb-3">
+      <span class="eyebrow" id="shop-count">—</span>
+      <span class="mono muted">Envío gratis desde 60 €</span>
+    </div>
+
+    <div class="prod-grid" id="shop-grid" aria-live="polite"></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Impreso bajo demanda</span><span>Talleres de la UE</span><span>Algodón pesado</span><span>Devolución 30 días</span>
+      <span>Impreso bajo demanda</span><span>Talleres de la UE</span><span>Algodón pesado</span><span>Devolución 30 días</span>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer-root"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="data/catalog.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/catalog.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — GZS WEAR BRANDS</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2317140F'/><text x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23F1EBE1' text-anchor='middle'>G</text></svg>">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="checkout" data-nav="cart">
+
+<a class="skip" href="#main">Saltar al contenido</a>
+<div id="site-header-root"></div>
+
+<main id="main">
+  <section class="wrap" style="padding-block:clamp(28px,4vw,56px) clamp(56px,8vw,110px)">
+    <span class="eyebrow reveal">Paso 2 de 2</span>
+    <h1 class="display mt-1 mb-4" style="font-size:clamp(40px,6vw,86px)">Check<em style="color:var(--clay)">out</em></h1>
+
+    <div class="co-layout">
+      <form id="co-form" novalidate>
+        <div class="co-step">
+          <h3 class="display"><span class="n">01</span> Contacto</h3>
+          <p class="sub">Te enviaremos la confirmación y el seguimiento aquí.</p>
+          <div class="fgrid">
+            <div class="f fw"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="tu@email.com" required autocomplete="email"></div>
+            <div class="f"><label for="nombre">Nombre y apellidos</label><input id="nombre" name="nombre" placeholder="Nombre completo" required autocomplete="name"></div>
+            <div class="f"><label for="telefono">Teléfono (opcional)</label><input id="telefono" name="telefono" placeholder="+34 600 000 000" autocomplete="tel"></div>
+          </div>
+        </div>
+
+        <div class="co-step">
+          <h3 class="display"><span class="n">02</span> Envío</h3>
+          <p class="sub">Producción 2-4 días + envío 3-6 días laborables. Te avisamos por email en cada paso.</p>
+          <div class="fgrid">
+            <div class="f fw"><label for="direccion">Dirección</label><input id="direccion" name="direccion" placeholder="Calle, número, piso" required autocomplete="street-address"></div>
+            <div class="f fw"><label for="direccion2">Dirección 2 (opcional)</label><input id="direccion2" name="direccion2" placeholder="Escalera, puerta, indicaciones" autocomplete="address-line2"></div>
+            <div class="f"><label for="ciudad">Ciudad</label><input id="ciudad" name="ciudad" placeholder="Ciudad" required autocomplete="address-level2"></div>
+            <div class="f"><label for="cp">Código postal</label><input id="cp" name="cp" placeholder="28000" required autocomplete="postal-code" inputmode="numeric"></div>
+            <div class="f fw"><label for="pais">País</label>
+              <select id="pais" name="pais" required>
+                <option value="ES" selected>España</option>
+                <option value="PT">Portugal</option>
+                <option value="FR">Francia</option>
+                <option value="IT">Italia</option>
+                <option value="DE">Alemania</option>
+                <option value="NL">Países Bajos</option>
+                <option value="BE">Bélgica</option>
+                <option value="AT">Austria</option>
+                <option value="IE">Irlanda</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="co-step">
+          <h3 class="display"><span class="n">03</span> Pago</h3>
+          <p class="sub">Pago cifrado. No guardamos datos de tarjeta en el sitio.</p>
+          <div class="fgrid">
+            <label class="payopt is-on fw">
+              <span class="radio"><i></i></span>
+              <input type="radio" name="pago" value="stripe" checked class="sr">
+              <span>
+                <strong class="small">Tarjeta · Stripe</strong>
+                <span class="muted small" style="display:block">Visa, Mastercard, Amex · Apple Pay y Google Pay según dispositivo</span>
+              </span>
+            </label>
+            <label class="payopt fw">
+              <span class="radio"><i></i></span>
+              <input type="radio" name="pago" value="klarna" class="sr">
+              <span>
+                <strong class="small">Klarna (próximamente)</strong>
+                <span class="muted small" style="display:block">Paga en 3 plazos sin intereses</span>
+              </span>
+            </label>
+          </div>
+          <div class="co-note">
+            <strong>Modo demo:</strong> Stripe y Supabase están listos para conectar. Rellena
+            <code>assets/js/config.js</code> y el botón de pago funcionará de verdad. Instrucciones en el <code>README.md</code>.
+          </div>
+        </div>
+
+        <div class="co-step" style="border-bottom:1px solid var(--line)">
+          <label class="flex small muted" style="align-items:flex-start;gap:10px">
+            <input type="checkbox" required style="width:auto;margin-top:3px">
+            <span>He leído y acepto los <a href="terminos.html" style="text-decoration:underline">términos</a> y la <a href="privacidad.html" style="text-decoration:underline">política de privacidad</a>.</span>
+          </label>
+          <button class="btn btn--wide mt-4" id="pay-btn" type="submit" style="padding-block:19px">Pagar ahora <span class="arrow">→</span></button>
+          <p class="mono muted center mt-2" style="font-size:9.5px">Pago seguro cifrado · Stripe · Devolución en 30 días</p>
+        </div>
+      </form>
+
+      <aside class="summary" id="co-summary" aria-label="Resumen del pedido"></aside>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer-root"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="data/catalog.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/catalog.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>
