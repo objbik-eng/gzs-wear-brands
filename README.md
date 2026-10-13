@@ -206,7 +206,7 @@ Todo el contenido de producto vive en `data/products.json` (`index` → `product
 
 ```json
 {
-  "id": "…",                       // id del producto en Printify
+  "id": "…",                       // referencia interna del producto
   "slug": "tee-lets-play",         // usado en la URL: product.html?p=…
   "name": "Let's Play Oversized",
   "cat": "Oversize",               // Camisetas | Oversize | Sudaderas | Accesorios
@@ -219,9 +219,9 @@ Todo el contenido de producto vive en `data/products.json` (`index` → `product
 }
 ```
 
-Los datos salieron directamente de **Printify** (API v1): variantes, precios, tallas, colores y
-mockups. Si añades un producto en Printify y quieres traerlo aquí, copia su ficha siguiendo este
-esquema y duplica la entrada. *Tras editar `products.json`, regenera `catalog.js`*:
+Los datos de cada ficha (variantes, precios, tallas, colores e imágenes) se importaron desde tu
+proveedor de producción. Si añades una pieza nueva y quieres traerla aquí, copia su ficha siguiendo
+este esquema y duplica la entrada. *Tras editar `products.json`, regenera `catalog.js`*:
 
 ```bash
 python3 - <<'EOF'
@@ -270,4 +270,4 @@ aunque para probar el carrito y las rutas lo recomendable es el servidor.
 ## 📄 Licencia y créditos
 
 © GZS WEAR BRANDS. Diseño y desarrollo propios. Tipografías: Fraunces, Inter y Space Mono
-(SIL Open Font License). Productos fabricados bajo demanda vía Printify en talleres europeos.
+(SIL Open Font License). Productos elaborados en talleres europeos.

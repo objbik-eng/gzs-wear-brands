@@ -104,7 +104,7 @@
         <div class="footer-top">
           <div class="footer-brand">
             <a class="brand" style="color:var(--bone)" href="index.html">GZS<span class="dot"></span><small style="color:rgba(241,235,225,.5)">WEAR BRANDS</small></a>
-            <p>${esc(cfg.brand.tagline)} Streetwear minimal impreso bajo demanda en Europa. Cada pieza se fabrica cuando la pides: menos stock, menos residuo.</p>
+            <p>${esc(cfg.brand.tagline)} Streetwear minimal de edición limitada. Series cortas, algodón pesado y piezas hechas para durar.</p>
             <div class="footer-social">
               <a href="${cfg.brand.instagram}" aria-label="Instagram" target="_blank" rel="noopener">${ICONS.ig}</a>
               <a href="${cfg.brand.tiktok}" aria-label="TikTok" target="_blank" rel="noopener">${ICONS.tt}</a>
@@ -137,9 +137,9 @@
         </div>
         <div class="footer-giant" aria-hidden="true">GZS WEAR</div>
         <div class="footer-bottom">
-          <span class="mono">© ${y} ${esc(cfg.brand.name)} · Hecho con tinta y grano</span>
+          <span class="mono">© ${y} ${esc(cfg.brand.name)} · Urban minimal style</span>
           <span class="pays"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>APPLE&nbsp;PAY</span><span>KLARNA</span></span>
-          <span class="mono">Producción bajo demanda en la UE</span>
+          <span class="mono">Envíos a toda la UE</span>
         </div>
       </div>
     </footer>`;
@@ -205,7 +205,7 @@
       <div class="totline grand"><span class="display" style="font-size:19px">Total</span><span class="v" style="font-size:17px">${money(t.total)}</span></div>
       <a class="btn btn--wide mt-3" href="checkout.html">Tramitar pedido ${ICONS.arrow}</a>
       <button class="btn btn--ghost btn--wide mt-2" data-close-drawer>Seguir comprando</button>
-      <p class="mono muted center mt-2" style="font-size:9px">Pago seguro · Producción 2-4 días · Envío 3-6 días</p>`;
+      <p class="mono muted center mt-2" style="font-size:9px">Pago seguro · Preparación 2-4 días · Envío 3-6 días</p>`;
 
     box.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => {
       const i = +b.dataset.i; cart.update(i, cart.items[i].qty + (+b.dataset.q));

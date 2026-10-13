@@ -236,7 +236,7 @@
 
         <div class="perks">
           <span class="perk">${ICONS.truck} Envío gratis desde ${money(cfg.shipping.freeFrom)} · entrega 3-6 días</span>
-          <span class="perk">${ICONS.leaf} Impreso bajo demanda en la UE (sin sobrestock)</span>
+          <span class="perk">${ICONS.leaf} Series cortas: cero excedentes y menos residuo</span>
           <span class="perk">${ICONS.shield} Pago seguro · Devoluciones en 30 días</span>
         </div>
 
@@ -244,12 +244,12 @@
           <details open>
             <summary>Detalles y materiales <span class="ind">+</span></summary>
             <div class="body"><ul>${p.feats.map(f => `<li>${esc(f)}</li>`).join('')}</ul>
-            <p class="mt-2" style="font-size:13px">Base: ${esc(p.blueprint)} · Taller: ${esc(p.provider)}</p></div>
+            <p class="mt-2" style="font-size:13px">Referencia: GZS-${esc(p.id.slice(-6).toUpperCase())}</p></div>
           </details>
           <details>
             <summary>Envío y devoluciones <span class="ind">+</span></summary>
             <div class="body">
-              <p>Producción en 2-4 días laborables + envío en 3-6 días. Envío gratis desde ${money(cfg.shipping.freeFrom)} (si no, ${money(cfg.shipping.flatRate)}).</p>
+              <p>Preparación en 2-4 días laborables + envío en 3-6 días. Envío gratis desde ${money(cfg.shipping.freeFrom)} (si no, ${money(cfg.shipping.flatRate)}).</p>
               <p>30 días de devolución sin preguntas: escríbenos a <a href="mailto:${cfg.brand.email}" style="text-decoration:underline">${cfg.brand.email}</a>.</p>
             </div>
           </details>
