@@ -44,6 +44,7 @@ gzs-wear-brands/
 │   ├── products.json       · Catálogo (fuente de verdad)
 │   └── catalog.js          · Copia incrustada (para abrir sin servidor)
 ├── assets/
+│   ├── img/looks/          · 📸 Fotos de modelo (lookbook de producto)
 │   ├── css/styles.css      · Sistema de diseño completo
 │   ├── js/config.js        · ⚙️ CONFIGURACIÓN (Stripe, Supabase, envíos, promo)
 │   ├── js/cart.js          · Lógica del carrito

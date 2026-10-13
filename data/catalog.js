@@ -44,6 +44,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tee-calm-is-confidence-1.webp",
+    "assets/img/looks/tee-calm-is-confidence-look.webp",
     "assets/img/products/tee-calm-is-confidence-2.webp",
     "assets/img/products/tee-calm-is-confidence-3.webp"
    ],
@@ -53,7 +54,8 @@ window.GZS_CATALOG = {
      "hex": "#1a1a1a",
      "raw": "Black"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tee-calm-is-confidence-look.webp"
   },
   {
    "id": "6ace50f6a760e000a20a5649",
@@ -90,6 +92,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tee-focused-present-free-1.webp",
+    "assets/img/looks/tee-focused-present-free-look.webp",
     "assets/img/products/tee-focused-present-free-2.webp",
     "assets/img/products/tee-focused-present-free-3.webp"
    ],
@@ -99,7 +102,8 @@ window.GZS_CATALOG = {
      "hex": "#ece4d4",
      "raw": "Ivory"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tee-focused-present-free-look.webp"
   },
   {
    "id": "6ace50f1a760e000a20a5646",
@@ -136,6 +140,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tee-less-but-better-1.webp",
+    "assets/img/looks/tee-less-but-better-look.webp",
     "assets/img/products/tee-less-but-better-2.webp",
     "assets/img/products/tee-less-but-better-3.webp"
    ],
@@ -145,7 +150,8 @@ window.GZS_CATALOG = {
      "hex": "#f2efe9",
      "raw": "White"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tee-less-but-better-look.webp"
   },
   {
    "id": "6ace50ee29af0fb9050dc2c3",
@@ -183,6 +189,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tee-new-classic-1.webp",
+    "assets/img/looks/tee-new-classic-look.webp",
     "assets/img/products/tee-new-classic-2.webp",
     "assets/img/products/tee-new-classic-3.webp",
     "assets/img/products/tee-new-classic-4.webp",
@@ -194,7 +201,8 @@ window.GZS_CATALOG = {
      "hex": "#d9c7a8",
      "raw": "Sand"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tee-new-classic-look.webp"
   },
   {
    "id": "6ace5180a760e000a20a5657",
@@ -230,6 +238,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tee-lets-play-1.webp",
+    "assets/img/looks/tee-lets-play-look.webp",
     "assets/img/products/tee-lets-play-2.webp",
     "assets/img/products/tee-lets-play-3.webp",
     "assets/img/products/tee-lets-play-4.webp",
@@ -241,7 +250,8 @@ window.GZS_CATALOG = {
      "hex": "#f2efe9",
      "raw": "Blanc White"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tee-lets-play-look.webp"
   },
   {
    "id": "6ace517fa760e000a20a5656",
@@ -279,6 +289,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tee-minimal-minded-1.webp",
+    "assets/img/looks/tee-minimal-minded-look.webp",
     "assets/img/products/tee-minimal-minded-2.webp"
    ],
    "colorsUI": [
@@ -287,7 +298,8 @@ window.GZS_CATALOG = {
      "hex": "#c9bbd8",
      "raw": "Lilac"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tee-minimal-minded-look.webp"
   },
   {
    "id": "6ace50ef29af0fb9050dc2c4",
@@ -326,6 +338,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tee-wavy-crest-1.webp",
+    "assets/img/looks/tee-wavy-crest-look.webp",
     "assets/img/products/tee-wavy-crest-2.webp",
     "assets/img/products/tee-wavy-crest-3.webp",
     "assets/img/products/tee-wavy-crest-4.webp",
@@ -337,7 +350,8 @@ window.GZS_CATALOG = {
      "hex": "#6b6b4a",
      "raw": "Olive"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tee-wavy-crest-look.webp"
   },
   {
    "id": "6ace50ec29af0fb9050dc2c2",
@@ -375,6 +389,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/hoodie-question-mark-1.webp",
+    "assets/img/looks/hoodie-question-mark-look.webp",
     "assets/img/products/hoodie-question-mark-2.webp",
     "assets/img/products/hoodie-question-mark-3.webp",
     "assets/img/products/hoodie-question-mark-4.webp",
@@ -386,7 +401,8 @@ window.GZS_CATALOG = {
      "hex": "#a3392f",
      "raw": "Red"
     }
-   ]
+   ],
+   "look": "assets/img/looks/hoodie-question-mark-look.webp"
   },
   {
    "id": "6ace50f0a760e000a20a5645",
@@ -422,6 +438,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/sweatshirt-breathe-1.webp",
+    "assets/img/looks/sweatshirt-breathe-look.webp",
     "assets/img/products/sweatshirt-breathe-2.webp",
     "assets/img/products/sweatshirt-breathe-3.webp",
     "assets/img/products/sweatshirt-breathe-4.webp",
@@ -433,7 +450,8 @@ window.GZS_CATALOG = {
      "hex": "#a9c4d6",
      "raw": "Light Blue"
     }
-   ]
+   ],
+   "look": "assets/img/looks/sweatshirt-breathe-look.webp"
   },
   {
    "id": "6ace50eb29af0fb9050dc2c1",
@@ -471,6 +489,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/hoodie-gzs-logo-1.webp",
+    "assets/img/looks/hoodie-gzs-logo-look.webp",
     "assets/img/products/hoodie-gzs-logo-2.webp",
     "assets/img/products/hoodie-gzs-logo-3.webp",
     "assets/img/products/hoodie-gzs-logo-4.webp"
@@ -481,7 +500,8 @@ window.GZS_CATALOG = {
      "hex": "#4d5340",
      "raw": "Military Green"
     }
-   ]
+   ],
+   "look": "assets/img/looks/hoodie-gzs-logo-look.webp"
   },
   {
    "id": "6ace50f4a760e000a20a5648",
@@ -517,6 +537,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/sweatshirt-less-noise-1.webp",
+    "assets/img/looks/sweatshirt-less-noise-look.webp",
     "assets/img/products/sweatshirt-less-noise-2.webp",
     "assets/img/products/sweatshirt-less-noise-3.webp",
     "assets/img/products/sweatshirt-less-noise-4.webp",
@@ -528,7 +549,8 @@ window.GZS_CATALOG = {
      "hex": "#d96b2f",
      "raw": "Safety Orange"
     }
-   ]
+   ],
+   "look": "assets/img/looks/sweatshirt-less-noise-look.webp"
   },
   {
    "id": "6ace50f9a760e000a20a564b",
@@ -559,6 +581,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/cap-balance-1.webp",
+    "assets/img/looks/cap-balance-look.webp",
     "assets/img/products/cap-balance-2.webp",
     "assets/img/products/cap-balance-3.webp"
    ],
@@ -568,7 +591,8 @@ window.GZS_CATALOG = {
      "hex": "#b3a077",
      "raw": "Khaki"
     }
-   ]
+   ],
+   "look": "assets/img/looks/cap-balance-look.webp"
   },
   {
    "id": "6ace50f3a760e000a20a5647",
@@ -599,6 +623,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/beanie-gzs-wear-1.webp",
+    "assets/img/looks/beanie-gzs-wear-look.webp",
     "assets/img/products/beanie-gzs-wear-2.webp",
     "assets/img/products/beanie-gzs-wear-3.webp",
     "assets/img/products/beanie-gzs-wear-4.webp",
@@ -610,7 +635,8 @@ window.GZS_CATALOG = {
      "hex": "#4b4b4b",
      "raw": "Dark Grey"
     }
-   ]
+   ],
+   "look": "assets/img/looks/beanie-gzs-wear-look.webp"
   },
   {
    "id": "6ace50f0a760e000a20a5644",
@@ -641,6 +667,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/cap-presence-1.webp",
+    "assets/img/looks/cap-presence-look.webp",
     "assets/img/products/cap-presence-2.webp"
    ],
    "colorsUI": [
@@ -649,7 +676,8 @@ window.GZS_CATALOG = {
      "hex": "#2c3a52",
      "raw": "Dark Navy"
     }
-   ]
+   ],
+   "look": "assets/img/looks/cap-presence-look.webp"
   },
   {
    "id": "6ace517e92bd2dc61904e332",
@@ -684,6 +712,7 @@ window.GZS_CATALOG = {
    ],
    "images": [
     "assets/img/products/tote-urban-calm-1.webp",
+    "assets/img/looks/tote-urban-calm-look.webp",
     "assets/img/products/tote-urban-calm-2.webp",
     "assets/img/products/tote-urban-calm-3.webp",
     "assets/img/products/tote-urban-calm-4.webp"
@@ -714,7 +743,8 @@ window.GZS_CATALOG = {
      "hex": "#2c3a52",
      "raw": "Navy"
     }
-   ]
+   ],
+   "look": "assets/img/looks/tote-urban-calm-look.webp"
   }
  ]
 };
