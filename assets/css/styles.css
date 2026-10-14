@@ -557,6 +557,12 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
   .burger{display:grid;}
   .hero-grid{grid-template-columns:1fr;}
   .hero-media img{aspect-ratio:4/5;}
+  /* Orden móvil: 1) botones  2) foto  3) todo el texto */
+  .hero-copy{display:contents;}
+  .hero-actions{order:1;margin-top:0;}
+  .hero-media{order:2;}
+  .hero-text{order:3;}
+  .hero-trust{order:4;}
   .split,.split--asym{grid-template-columns:1fr;}
   .pdp{grid-template-columns:1fr;}
   .pdp-gallery{position:static;}
