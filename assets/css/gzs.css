@@ -13,25 +13,25 @@
 /* ---------- Tokens ---------- */
 :root{
   /* GRIS — base/fondo de toda la web */
-  --bone:#E3E0DA;          /* fondo de página */
+  --bone:#9E9E9E;          /* fondo de página — gris urbano */
   /* BLANCO ROTO — tarjetas, bandas y paneles */
   --paper:#F7F4EE;         /* superficie clara */
   --white:#F7F4EE;
   /* MARRÓN — color de marca (cartel URBAN) */
   --ink:#302114;           /* fondo del cartel URBAN */
   --ink-80:rgba(48,33,20,.86);
-  --brown:#7A4E27;         /* marrón de acento visible */
+  --brown:#5C3A1C;         /* marrón de acento (legible sobre gris) */
   /* GRIS — textos secundarios, bordes y superficies */
-  --ink-60:#7B7771;        /* gris neutro */
-  --ink-40:#A5A19B;        /* gris claro */
-  --grey:#7B7771;
+  --ink-60:#3A3631;        /* gris oscuro — textos secundarios */
+  --ink-40:#4A453F;        /* gris medio — terciario */
+  --grey:#3A3631;
   --grey-50:#F7F4EE;       /* bandas (marquee, newsletter, resumen) */
   --grey-100:#E2DFDA;      /* superficie gris */
-  --line:rgba(123,119,113,.38);
-  --line-strong:rgba(123,119,113,.58);
+  --line:rgba(48,33,20,.26);
+  --line-strong:rgba(48,33,20,.44);
   --camel:#7A4E27;
-  --clay:#7A4E27;
-  --sage:#7B7771;
+  --clay:#5C3A1C;
+  --sage:#3A3631;
   --sand:#D9D4CB;          /* claro neutro sobre fondo marrón */
   --stone:#F7F4EE;         /* fondo de tarjetas/miniaturas — BLANCO ROTO */
   --on-dark:#F7F4EE;       /* texto sobre fondos marrones */
@@ -275,6 +275,8 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
 }
 .chip:hover{border-color:var(--ink);}
 .chip.is-on{background:var(--ink);color:var(--on-dark);border-color:var(--ink);}
+.chip .muted{color:var(--ink-40);}
+.chip.is-on .muted{color:var(--on-dark);opacity:.7;}
 .field{
   display:flex;align-items:center;gap:9px;border:1px solid var(--line-strong);border-radius:var(--r-pill);
   padding:10px 16px;background:var(--paper);min-width:200px;
