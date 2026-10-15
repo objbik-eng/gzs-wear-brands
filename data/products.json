@@ -556,23 +556,23 @@
       "name": "Balance Cap",
       "cat": "Accesorios",
       "badge": "",
-      "desc": "Gorra low-profile en tono caqui con bordado 'Balance'. Visera curva, ajuste discreto y un recordatorio para el día a día.",
+      "desc": "Gorra trucker negra con malla transpirable y el script 'Balance' bordado en dorado. Un recordatorio para el día a día, en clave retro.",
       "feats": [
-        "Bordado 'Balance' 3D",
-        "Perfil bajo 6 paneles",
-        "Cierre ajustable",
+        "Bordado 'Balance' en dorado",
+        "Frente de espuma + malla transpirable",
+        "Cierre snapback ajustable",
         "Talla única"
       ],
       "tags": [
         "Gorra",
+        "Trucker",
         "Bordado",
-        "Mindfulness",
-        "Unisex"
+        "Mindfulness"
       ],
       "price": 26.9,
       "priceMax": 26.9,
       "colors": [
-        "Khaki"
+        "Black"
       ],
       "sizes": [
         "One size"
@@ -585,9 +585,9 @@
       ],
       "colorsUI": [
         {
-          "name": "Caqui",
-          "hex": "#b3a077",
-          "raw": "Khaki"
+          "name": "Negro",
+          "hex": "#1b1b1b",
+          "raw": "Black"
         }
       ],
       "look": "assets/img/looks/cap-balance-look.webp"
@@ -642,18 +642,18 @@
       "name": "Presence Cap",
       "cat": "Accesorios",
       "badge": "",
-      "desc": "Gorra en azul marino con el script 'Presence' bordado. Perfil bajo, visera curva y presencia silenciosa.",
+      "desc": "Gorra trucker de frente acolchado en azul marino, con malla transpirable y el script 'Presence' bordado. Visera curva, cierre snapback y presencia silenciosa.",
       "feats": [
         "Bordado script 'Presence'",
-        "Perfil bajo 6 paneles",
-        "Cierre ajustable",
+        "Frente de espuma + malla transpirable",
+        "Cierre snapback ajustable",
         "Talla única"
       ],
       "tags": [
         "Gorra",
-        "Script",
-        "Unisex",
-        "Mindfulness"
+        "Trucker",
+        "Bordado",
+        "Unisex"
       ],
       "price": 26.9,
       "priceMax": 26.9,
