@@ -28,8 +28,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Calma"
    ],
-   "price": 27.63,
-   "priceMax": 39.34,
+   "price": 29.9,
+   "priceMax": 31.9,
    "colors": [
     "Black"
    ],
@@ -76,8 +76,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Icono"
    ],
-   "price": 27.63,
-   "priceMax": 39.34,
+   "price": 29.9,
+   "priceMax": 31.9,
    "colors": [
     "Ivory"
    ],
@@ -124,8 +124,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Icono"
    ],
-   "price": 27.63,
-   "priceMax": 39.34,
+   "price": 29.9,
+   "priceMax": 31.9,
    "colors": [
     "White"
    ],
@@ -172,8 +172,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Essentials"
    ],
-   "price": 26.42,
-   "priceMax": 30.18,
+   "price": 29.9,
+   "priceMax": 31.9,
    "colors": [
     "Sand"
    ],
@@ -223,8 +223,8 @@ window.GZS_CATALOG = {
     "Floral",
     "Unisex"
    ],
-   "price": 37.54,
-   "priceMax": 37.54,
+   "price": 49.9,
+   "priceMax": 49.9,
    "colors": [
     "Blanc White"
    ],
@@ -272,8 +272,8 @@ window.GZS_CATALOG = {
     "Logo",
     "Unisex"
    ],
-   "price": 37.54,
-   "priceMax": 38.97,
+   "price": 49.9,
+   "priceMax": 50.9,
    "colors": [
     "Lilac"
    ],
@@ -320,8 +320,8 @@ window.GZS_CATALOG = {
     "Nature",
     "Unisex"
    ],
-   "price": 37.54,
-   "priceMax": 38.97,
+   "price": 49.9,
+   "priceMax": 50.9,
    "colors": [
     "Olive"
    ],
@@ -372,8 +372,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Colección 001"
    ],
-   "price": 43.16,
-   "priceMax": 48.87,
+   "price": 54.9,
+   "priceMax": 58.9,
    "colors": [
     "Red"
    ],
@@ -423,8 +423,8 @@ window.GZS_CATALOG = {
     "Calma",
     "Unisex"
    ],
-   "price": 34.0,
-   "priceMax": 39.53,
+   "price": 54.9,
+   "priceMax": 58.9,
    "colors": [
     "Light Blue"
    ],
@@ -472,8 +472,8 @@ window.GZS_CATALOG = {
     "Verde militar",
     "Icono"
    ],
-   "price": 43.16,
-   "priceMax": 48.87,
+   "price": 54.9,
+   "priceMax": 58.9,
    "colors": [
     "Military Green"
    ],
@@ -504,12 +504,12 @@ window.GZS_CATALOG = {
    "look": "assets/img/looks/hoodie-gzs-logo-look.webp"
   },
   {
-   "id": "6ace50f4a760e000a20a5648",
+   "id": "6ad127af210a7ce1c702d90f",
    "slug": "sweatshirt-less-noise",
    "name": "Less Noise Crewneck",
    "cat": "Sudaderas",
    "badge": "Best Seller",
-   "desc": "Sudadera crewneck con gráfico minimal en el frente y 'Less Noise, More You' en la espalda. Algodón y poliéster cepillado por dentro.",
+   "desc": "Sudadera crewneck en gris jaspeado con gráfico minimal en el frente y 'Less Noise, More You' en la espalda. Algodón y poliéster cepillado por dentro.",
    "feats": [
     "Algodón/poliéster 275 g",
     "Cepillado interior suave",
@@ -522,10 +522,10 @@ window.GZS_CATALOG = {
     "Unisex",
     "Statement"
    ],
-   "price": 34.91,
-   "priceMax": 40.81,
+   "price": 54.9,
+   "priceMax": 57.9,
    "colors": [
-    "Safety Orange"
+    "Sport Grey"
    ],
    "sizes": [
     "S",
@@ -545,9 +545,9 @@ window.GZS_CATALOG = {
    ],
    "colorsUI": [
     {
-     "name": "Naranja",
-     "hex": "#d96b2f",
-     "raw": "Safety Orange"
+     "name": "Gris jaspeado",
+     "hex": "#C6C6C6",
+     "raw": "Sport Grey"
     }
    ],
    "look": "assets/img/looks/sweatshirt-less-noise-look.webp"
@@ -571,8 +571,8 @@ window.GZS_CATALOG = {
     "Mindfulness",
     "Unisex"
    ],
-   "price": 20.27,
-   "priceMax": 20.27,
+   "price": 29.9,
+   "priceMax": 29.9,
    "colors": [
     "Khaki"
    ],
@@ -613,8 +613,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Essentials"
    ],
-   "price": 21.13,
-   "priceMax": 21.13,
+   "price": 29.9,
+   "priceMax": 29.9,
    "colors": [
     "Dark Grey"
    ],
@@ -657,8 +657,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Mindfulness"
    ],
-   "price": 20.27,
-   "priceMax": 20.27,
+   "price": 29.9,
+   "priceMax": 29.9,
    "colors": [
     "Dark Navy"
    ],
@@ -698,8 +698,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Diario"
    ],
-   "price": 17.69,
-   "priceMax": 17.69,
+   "price": 29.9,
+   "priceMax": 29.9,
    "colors": [
     "Black",
     "Red",

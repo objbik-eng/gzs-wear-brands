@@ -26,8 +26,8 @@
         "Unisex",
         "Calma"
       ],
-      "price": 27.63,
-      "priceMax": 39.34,
+      "price": 29.9,
+      "priceMax": 31.9,
       "colors": [
         "Black"
       ],
@@ -74,8 +74,8 @@
         "Unisex",
         "Icono"
       ],
-      "price": 27.63,
-      "priceMax": 39.34,
+      "price": 29.9,
+      "priceMax": 31.9,
       "colors": [
         "Ivory"
       ],
@@ -122,8 +122,8 @@
         "Unisex",
         "Icono"
       ],
-      "price": 27.63,
-      "priceMax": 39.34,
+      "price": 29.9,
+      "priceMax": 31.9,
       "colors": [
         "White"
       ],
@@ -170,8 +170,8 @@
         "Unisex",
         "Essentials"
       ],
-      "price": 26.42,
-      "priceMax": 30.18,
+      "price": 29.9,
+      "priceMax": 31.9,
       "colors": [
         "Sand"
       ],
@@ -221,8 +221,8 @@
         "Floral",
         "Unisex"
       ],
-      "price": 37.54,
-      "priceMax": 37.54,
+      "price": 49.9,
+      "priceMax": 49.9,
       "colors": [
         "Blanc White"
       ],
@@ -270,8 +270,8 @@
         "Logo",
         "Unisex"
       ],
-      "price": 37.54,
-      "priceMax": 38.97,
+      "price": 49.9,
+      "priceMax": 50.9,
       "colors": [
         "Lilac"
       ],
@@ -318,8 +318,8 @@
         "Nature",
         "Unisex"
       ],
-      "price": 37.54,
-      "priceMax": 38.97,
+      "price": 49.9,
+      "priceMax": 50.9,
       "colors": [
         "Olive"
       ],
@@ -370,8 +370,8 @@
         "Unisex",
         "Colección 001"
       ],
-      "price": 43.16,
-      "priceMax": 48.87,
+      "price": 54.9,
+      "priceMax": 58.9,
       "colors": [
         "Red"
       ],
@@ -421,8 +421,8 @@
         "Calma",
         "Unisex"
       ],
-      "price": 34.0,
-      "priceMax": 39.53,
+      "price": 54.9,
+      "priceMax": 58.9,
       "colors": [
         "Light Blue"
       ],
@@ -470,8 +470,8 @@
         "Verde militar",
         "Icono"
       ],
-      "price": 43.16,
-      "priceMax": 48.87,
+      "price": 54.9,
+      "priceMax": 58.9,
       "colors": [
         "Military Green"
       ],
@@ -502,12 +502,12 @@
       "look": "assets/img/looks/hoodie-gzs-logo-look.webp"
     },
     {
-      "id": "6ace50f4a760e000a20a5648",
+      "id": "6ad127af210a7ce1c702d90f",
       "slug": "sweatshirt-less-noise",
       "name": "Less Noise Crewneck",
       "cat": "Sudaderas",
       "badge": "Best Seller",
-      "desc": "Sudadera crewneck con gráfico minimal en el frente y 'Less Noise, More You' en la espalda. Algodón y poliéster cepillado por dentro.",
+      "desc": "Sudadera crewneck en gris jaspeado con gráfico minimal en el frente y 'Less Noise, More You' en la espalda. Algodón y poliéster cepillado por dentro.",
       "feats": [
         "Algodón/poliéster 275 g",
         "Cepillado interior suave",
@@ -520,10 +520,10 @@
         "Unisex",
         "Statement"
       ],
-      "price": 34.91,
-      "priceMax": 40.81,
+      "price": 54.9,
+      "priceMax": 57.9,
       "colors": [
-        "Safety Orange"
+        "Sport Grey"
       ],
       "sizes": [
         "S",
@@ -543,9 +543,9 @@
       ],
       "colorsUI": [
         {
-          "name": "Naranja",
-          "hex": "#d96b2f",
-          "raw": "Safety Orange"
+          "name": "Gris jaspeado",
+          "hex": "#C6C6C6",
+          "raw": "Sport Grey"
         }
       ],
       "look": "assets/img/looks/sweatshirt-less-noise-look.webp"
@@ -569,8 +569,8 @@
         "Mindfulness",
         "Unisex"
       ],
-      "price": 20.27,
-      "priceMax": 20.27,
+      "price": 29.9,
+      "priceMax": 29.9,
       "colors": [
         "Khaki"
       ],
@@ -611,8 +611,8 @@
         "Unisex",
         "Essentials"
       ],
-      "price": 21.13,
-      "priceMax": 21.13,
+      "price": 29.9,
+      "priceMax": 29.9,
       "colors": [
         "Dark Grey"
       ],
@@ -655,8 +655,8 @@
         "Unisex",
         "Mindfulness"
       ],
-      "price": 20.27,
-      "priceMax": 20.27,
+      "price": 29.9,
+      "priceMax": 29.9,
       "colors": [
         "Dark Navy"
       ],
@@ -696,8 +696,8 @@
         "Unisex",
         "Diario"
       ],
-      "price": 17.69,
-      "priceMax": 17.69,
+      "price": 29.9,
+      "priceMax": 29.9,
       "colors": [
         "Black",
         "Red",
