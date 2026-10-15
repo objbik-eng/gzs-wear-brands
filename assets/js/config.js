@@ -18,7 +18,7 @@ window.GZS_CONFIG = {
   shipping: {
     freeFrom: 49,        // envío gratis a partir de este importe (€)
                        // 49 € está calculado sobre el catálogo: entra 1 sudadera (49,90),
-                       // 2 camisetas (59,80), camiseta+gorra (56,80) y cualquier combo;
+                       // 2 camisetas (59,80), camiseta+gorra (62,80) y cualquier combo;
                        // solo paga envío la prenda suelta barata (camiseta 29,90 / gorro 24,90 / tote 24,90),
                        // la gorra suelta (32,90) y el oversize suelto (44,90), que queda a 4,10 € del umbral.
     flatRate: 4.95,      // coste de envío si no se alcanza
