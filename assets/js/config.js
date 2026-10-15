@@ -16,7 +16,9 @@ window.GZS_CONFIG = {
   locale: 'es-ES',
 
   shipping: {
-    freeFrom: 60,        // envío gratis a partir de este importe (€)
+    freeFrom: 49,        // envío gratis a partir de este importe (€)
+                       // 49 € está calculado: 1 oversize (49,90) ya lo supera y las
+                       // 2 camisetas (59,80) también; solo la prenda suelta barata paga envío.
     flatRate: 4.95,      // coste de envío si no se alcanza
   },
 
