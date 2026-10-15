@@ -558,9 +558,9 @@ window.GZS_CATALOG = {
    "name": "Balance Cap",
    "cat": "Accesorios",
    "badge": "",
-   "desc": "Gorra low-profile en tono caqui con bordado 'Balance'. Visera curva, ajuste discreto y un recordatorio para el día a día.",
+   "desc": "Gorra tipo dad cap en caqui con bordado 'Balance' en dorado. Visera curva, ajuste discreto y un recordatorio para el día a día.",
    "feats": [
-    "Bordado 'Balance' 3D",
+    "Bordado 'Balance' en dorado",
     "Perfil bajo 6 paneles",
     "Cierre ajustable",
     "Talla única"
@@ -571,8 +571,8 @@ window.GZS_CATALOG = {
     "Mindfulness",
     "Unisex"
    ],
-   "price": 26.9,
-   "priceMax": 26.9,
+   "price": 32.9,
+   "priceMax": 32.9,
    "colors": [
     "Khaki"
    ],
@@ -641,7 +641,7 @@ window.GZS_CATALOG = {
    "name": "Presence Cap",
    "cat": "Accesorios",
    "badge": "",
-   "desc": "Gorra en azul marino con el script 'Presence' bordado. Perfil bajo, visera curva y presencia silenciosa.",
+   "desc": "Gorra tipo dad cap en azul marino con el script 'Presence' bordado. Perfil bajo, visera curva y presencia silenciosa.",
    "feats": [
     "Bordado script 'Presence'",
     "Perfil bajo 6 paneles",
@@ -654,10 +654,10 @@ window.GZS_CATALOG = {
     "Unisex",
     "Mindfulness"
    ],
-   "price": 26.9,
-   "priceMax": 26.9,
+   "price": 32.9,
+   "priceMax": 32.9,
    "colors": [
-    "Dark Navy"
+    "Navy"
    ],
    "sizes": [
     "One size"
@@ -671,7 +671,7 @@ window.GZS_CATALOG = {
     {
      "name": "Azul marino",
      "hex": "#2c3a52",
-     "raw": "Dark Navy"
+     "raw": "Navy"
     }
    ],
    "look": "assets/img/looks/cap-presence-look.webp"
