@@ -558,23 +558,23 @@ window.GZS_CATALOG = {
    "name": "Balance Cap",
    "cat": "Accesorios",
    "badge": "",
-   "desc": "Gorra trucker negra con malla transpirable y el script 'Balance' bordado en dorado. Un recordatorio para el día a día, en clave retro.",
+   "desc": "Gorra low-profile en tono caqui con bordado 'Balance'. Visera curva, ajuste discreto y un recordatorio para el día a día.",
    "feats": [
-    "Bordado 'Balance' en dorado",
-    "Frente de espuma + malla transpirable",
-    "Cierre snapback ajustable",
+    "Bordado 'Balance' 3D",
+    "Perfil bajo 6 paneles",
+    "Cierre ajustable",
     "Talla única"
    ],
    "tags": [
     "Gorra",
-    "Trucker",
     "Bordado",
-    "Mindfulness"
+    "Mindfulness",
+    "Unisex"
    ],
    "price": 26.9,
    "priceMax": 26.9,
    "colors": [
-    "Black"
+    "Khaki"
    ],
    "sizes": [
     "One size"
@@ -587,9 +587,9 @@ window.GZS_CATALOG = {
    ],
    "colorsUI": [
     {
-     "name": "Negro",
-     "hex": "#1b1b1b",
-     "raw": "Black"
+     "name": "Caqui",
+     "hex": "#b3a077",
+     "raw": "Khaki"
     }
    ],
    "look": "assets/img/looks/cap-balance-look.webp"
@@ -624,10 +624,7 @@ window.GZS_CATALOG = {
    "images": [
     "assets/img/products/beanie-gzs-wear-1.webp",
     "assets/img/looks/beanie-gzs-wear-look.webp",
-    "assets/img/products/beanie-gzs-wear-2.webp",
-    "assets/img/products/beanie-gzs-wear-3.webp",
-    "assets/img/products/beanie-gzs-wear-4.webp",
-    "assets/img/products/beanie-gzs-wear-5.webp"
+    "assets/img/products/beanie-gzs-wear-2.webp"
    ],
    "colorsUI": [
     {
@@ -644,18 +641,18 @@ window.GZS_CATALOG = {
    "name": "Presence Cap",
    "cat": "Accesorios",
    "badge": "",
-   "desc": "Gorra trucker de frente acolchado en azul marino, con malla transpirable y el script 'Presence' bordado. Visera curva, cierre snapback y presencia silenciosa.",
+   "desc": "Gorra en azul marino con el script 'Presence' bordado. Perfil bajo, visera curva y presencia silenciosa.",
    "feats": [
     "Bordado script 'Presence'",
-    "Frente de espuma + malla transpirable",
-    "Cierre snapback ajustable",
+    "Perfil bajo 6 paneles",
+    "Cierre ajustable",
     "Talla única"
    ],
    "tags": [
     "Gorra",
-    "Trucker",
-    "Bordado",
-    "Unisex"
+    "Script",
+    "Unisex",
+    "Mindfulness"
    ],
    "price": 26.9,
    "priceMax": 26.9,
