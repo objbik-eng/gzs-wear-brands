@@ -223,8 +223,8 @@ window.GZS_CATALOG = {
     "Floral",
     "Unisex"
    ],
-   "price": 49.9,
-   "priceMax": 49.9,
+   "price": 44.9,
+   "priceMax": 44.9,
    "colors": [
     "Blanc White"
    ],
@@ -272,8 +272,8 @@ window.GZS_CATALOG = {
     "Logo",
     "Unisex"
    ],
-   "price": 49.9,
-   "priceMax": 50.9,
+   "price": 44.9,
+   "priceMax": 44.9,
    "colors": [
     "Lilac"
    ],
@@ -320,8 +320,8 @@ window.GZS_CATALOG = {
     "Nature",
     "Unisex"
    ],
-   "price": 49.9,
-   "priceMax": 50.9,
+   "price": 44.9,
+   "priceMax": 44.9,
    "colors": [
     "Olive"
    ],
@@ -372,8 +372,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Colección 001"
    ],
-   "price": 54.9,
-   "priceMax": 58.9,
+   "price": 49.9,
+   "priceMax": 49.9,
    "colors": [
     "Red"
    ],
@@ -423,8 +423,8 @@ window.GZS_CATALOG = {
     "Calma",
     "Unisex"
    ],
-   "price": 54.9,
-   "priceMax": 58.9,
+   "price": 49.9,
+   "priceMax": 49.9,
    "colors": [
     "Light Blue"
    ],
@@ -472,8 +472,8 @@ window.GZS_CATALOG = {
     "Verde militar",
     "Icono"
    ],
-   "price": 54.9,
-   "priceMax": 58.9,
+   "price": 49.9,
+   "priceMax": 49.9,
    "colors": [
     "Military Green"
    ],
@@ -522,8 +522,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Statement"
    ],
-   "price": 54.9,
-   "priceMax": 57.9,
+   "price": 49.9,
+   "priceMax": 49.9,
    "colors": [
     "Sport Grey"
    ],
@@ -571,8 +571,8 @@ window.GZS_CATALOG = {
     "Mindfulness",
     "Unisex"
    ],
-   "price": 29.9,
-   "priceMax": 29.9,
+   "price": 26.9,
+   "priceMax": 26.9,
    "colors": [
     "Khaki"
    ],
@@ -613,8 +613,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Essentials"
    ],
-   "price": 29.9,
-   "priceMax": 29.9,
+   "price": 24.9,
+   "priceMax": 24.9,
    "colors": [
     "Dark Grey"
    ],
@@ -657,8 +657,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Mindfulness"
    ],
-   "price": 29.9,
-   "priceMax": 29.9,
+   "price": 26.9,
+   "priceMax": 26.9,
    "colors": [
     "Dark Navy"
    ],
@@ -698,8 +698,8 @@ window.GZS_CATALOG = {
     "Unisex",
     "Diario"
    ],
-   "price": 29.9,
-   "priceMax": 29.9,
+   "price": 24.9,
+   "priceMax": 24.9,
    "colors": [
     "Black",
     "Red",
