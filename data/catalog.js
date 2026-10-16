@@ -580,10 +580,10 @@ window.GZS_CATALOG = {
     "One size"
    ],
    "images": [
-    "assets/img/products/cap-balance-1.webp",
-    "assets/img/looks/cap-balance-look.webp",
-    "assets/img/products/cap-balance-2.webp",
-    "assets/img/products/cap-balance-3.webp"
+    "assets/img/products/cap-balance-1.webp?v=16",
+    "assets/img/looks/cap-balance-look.webp?v=16",
+    "assets/img/products/cap-balance-2.webp?v=16",
+    "assets/img/products/cap-balance-3.webp?v=16"
    ],
    "colorsUI": [
     {
@@ -592,7 +592,7 @@ window.GZS_CATALOG = {
      "raw": "Khaki"
     }
    ],
-   "look": "assets/img/looks/cap-balance-look.webp"
+   "look": "assets/img/looks/cap-balance-look.webp?v=16"
   },
   {
    "id": "6ace50f3a760e000a20a5647",
@@ -663,9 +663,9 @@ window.GZS_CATALOG = {
     "One size"
    ],
    "images": [
-    "assets/img/products/cap-presence-1.webp",
-    "assets/img/looks/cap-presence-look.webp",
-    "assets/img/products/cap-presence-2.webp"
+    "assets/img/products/cap-presence-1.webp?v=16",
+    "assets/img/looks/cap-presence-look.webp?v=16",
+    "assets/img/products/cap-presence-2.webp?v=16"
    ],
    "colorsUI": [
     {
@@ -674,7 +674,7 @@ window.GZS_CATALOG = {
      "raw": "Navy"
     }
    ],
-   "look": "assets/img/looks/cap-presence-look.webp"
+   "look": "assets/img/looks/cap-presence-look.webp?v=16"
   },
   {
    "id": "6ace517e92bd2dc61904e332",
