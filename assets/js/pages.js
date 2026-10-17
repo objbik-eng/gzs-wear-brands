@@ -14,75 +14,44 @@
      INTEGRACIONES PENDIENTES (Stripe / Supabase)
      ====================================================================== */
   const Backend = {
-    /* Supabase: guarda el pedido en la tabla `orders`.
-       Cuando configures supabase.url + anonKey, esto ya funciona. */
-    async saveOrder(order) {
-      if (!cfg.supabase.enabled || !cfg.supabase.url || !cfg.supabase.anonKey) {
-        const local = JSON.parse(localStorage.getItem('gzs_orders_demo') || '[]');
-        local.push({ ...order, savedAt: new Date().toISOString(), demo: true });
-        localStorage.setItem('gzs_orders_demo', JSON.stringify(local));
-        return { demo: true };
-      }
-      const r = await fetch(`${cfg.supabase.url}/rest/v1/${cfg.supabase.tables.orders}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          apikey: cfg.supabase.anonKey,
-          Authorization: `Bearer ${cfg.supabase.anonKey}`,
-          Prefer: 'return=minimal',
-        },
-        body: JSON.stringify(order),
-      });
-      if (!r.ok) throw new Error('Supabase: ' + r.status);
-      return { ok: true };
-    },
-
-    /* Supabase: alta en newsletter (tabla `subscribers`) */
-    async subscribe(email) {
-      if (!cfg.supabase.enabled || !cfg.supabase.url) {
-        const l = JSON.parse(localStorage.getItem('gzs_subs_demo') || '[]');
-        if (!l.includes(email)) l.push(email);
-        localStorage.setItem('gzs_subs_demo', JSON.stringify(l));
-        return { demo: true };
-      }
-      const r = await fetch(`${cfg.supabase.url}/rest/v1/${cfg.supabase.tables.subscribers}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          apikey: cfg.supabase.anonKey,
-          Authorization: `Bearer ${cfg.supabase.anonKey}`,
-          Prefer: 'resolution=ignore-duplicates,return=minimal',
-        },
-        body: JSON.stringify({ email }),
-      });
-      if (!r.ok) throw new Error('Supabase: ' + r.status);
-      return { ok: true };
-    },
-
-    /* Stripe: crea la sesión de pago en tu backend y redirige.
-       Sin clave configurada, muestra el aviso de demo. */
-    async pay(order) {
+    /* Stripe: el servidor recalcula precios, valida stock y devuelve la URL
+       de la Checkout Session alojada por Stripe. */
+    async pay(payload) {
       if (!cfg.stripe.enabled || !cfg.stripe.checkoutEndpoint) {
-        modal(`
-          <span class="eyebrow">Integración pendiente</span>
-          <h3 class="mt-1">Stripe está listo para conectar</h3>
-          <p class="muted small">El pedido se ha registrado en local (demo). Para cobrar de verdad:</p>
-          <ol class="small" style="margin:14px 0 0 18px;display:grid;gap:8px">
-            <li>Abre <code>assets/js/config.js</code>.</li>
-            <li>Rellena <code>stripe.publishableKey</code> y <code>stripe.checkoutEndpoint</code>.</li>
-            <li>El endpoint debe crear una <em>Checkout Session</em> en Stripe y devolver su URL.</li>
-          </ol>
-          <p class="mt-3 small muted">Instrucciones completas en el <strong>README.md</strong> del repositorio.</p>`);
-        return { demo: true };
+        throw new Error('Pagos no configurados');
       }
       const r = await fetch(cfg.stripe.checkoutEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ order, items: cart.items, totals: cart.totals() }),
+        body: JSON.stringify(payload),
       });
-      const j = await r.json();
-      if (j.url) { window.location.href = j.url; return { redirect: true }; }
-      throw new Error('Stripe: respuesta sin url');
+      let j = {};
+      try { j = await r.json(); } catch (e) {}
+      if (!r.ok) throw new Error(j.error || 'No se pudo iniciar el pago');
+      if (!j.url) throw new Error('Stripe no devolvió la pasarela');
+      return j;
+    },
+
+    /* Newsletter en Supabase a través de /api/newsletter */
+    async subscribe(email) {
+      const r = await fetch(cfg.supabase.newsletterEndpoint || '/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!r.ok) {
+        const j = await r.json().catch(() => ({}));
+        throw new Error(j.error || 'No se pudo guardar');
+      }
+      return { ok: true };
+    },
+
+    /* Resumen del pedido para la página de gracias */
+    async order(sessionId) {
+      const r = await fetch(`${cfg.stripe.orderEndpoint || '/api/order'}?session_id=${encodeURIComponent(sessionId)}`);
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'No se pudo cargar el pedido');
+      return j;
     },
   };
 
@@ -380,6 +349,11 @@
     const form = $('#co-form');
     const promo = sessionStorage.getItem('gzs_promo') || '';
 
+    if (qs('cancelado') === '1') {
+      toast('Pago cancelado', 'No se te ha cobrado nada · tu carrito sigue aquí', { icon: ICONS.shield, ms: 6000 });
+      try { history.replaceState(null, '', 'checkout.html'); } catch (e) {}
+    }
+
     function renderSummary() {
       const items = cart.items, t = cart.totals(promo);
       if (!items.length) {
@@ -403,24 +377,24 @@
         <div class="totline"><span>Subtotal</span><span class="v">${money(t.sub)}</span></div>
         ${t.promo ? `<div class="totline"><span>Descuento ${esc(t.promo.label)}</span><span class="v">−${money(t.discount)}</span></div>` : ''}
         <div class="totline"><span>Envío</span><span class="v">${t.shipping === 0 ? 'Gratis' : money(t.shipping)}</span></div>
-        <div class="totline grand"><span class="display" style="font-size:20px">Total</span><span class="v" style="font-size:17px">${money(t.total)}</span></div>`;
+        <div class="totline grand"><span class="display" style="font-size:20px">Total</span><span class="v" style="font-size:17px">${money(t.total)}</span></div>
+        ${t.missingForFree > 0 ? `<p class="mono muted mt-2" style="font-size:9.5px">Te faltan ${money(t.missingForFree)} para el envío gratis</p>` : ''}
+        <p class="mono muted mt-3" style="font-size:9.5px">La dirección de entrega se confirma en la pasarela segura de Stripe.</p>`;
     }
     renderSummary();
     document.addEventListener('gzs:cart', renderSummary);
 
-    /* método de pago */
     $$('.payopt').forEach(o => o.addEventListener('click', () => {
       $$('.payopt').forEach(x => x.classList.toggle('is-on', x === o));
       o.querySelector('input') && (o.querySelector('input').checked = true);
     }));
 
-    /* validación + envío */
     form && form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!cart.items.length) { toast('Carrito vacío', 'Añade algo antes de pagar', { icon: ICONS.shield }); return; }
-      const req = $$('[required]', form);
+
       let bad = null;
-      req.forEach(f => {
+      $$('[required]', form).forEach(f => {
         const ok = f.checkValidity();
         f.setAttribute('aria-invalid', ok ? 'false' : 'true');
         if (!ok && !bad) bad = f;
@@ -428,31 +402,67 @@
       if (bad) { bad.focus(); toast('Faltan datos', 'Revisa los campos marcados', { icon: ICONS.shield }); return; }
 
       const data = Object.fromEntries(new FormData(form).entries());
-      const order = {
-        ref: 'GZS-' + Date.now().toString(36).toUpperCase(),
-        customer: { name: data.nombre, email: data.email, phone: data.telefono || '' },
-        address: { line1: data.direccion, line2: data.direccion2 || '', city: data.ciudad, zip: data.cp, country: data.pais },
-        items: cart.items,
-        totals: cart.totals(promo),
-        promo: promo || null,
-        status: 'pending',
+      const payload = {
+        items: cart.items.map(i => ({ id: i.id, qty: i.qty, color: i.color || '', size: i.size || '' })),
+        promo: promo || '',
+        customer: { email: data.email, name: data.nombre, phone: data.telefono || '' },
+        consent: form.querySelector('input[type=checkbox][required]')?.checked === true,
       };
 
-      const btn = $('#pay-btn'); btn.disabled = true; btn.innerHTML = 'Procesando…';
+      const btn = $('#pay-btn');
+      btn.disabled = true; btn.innerHTML = 'Conectando con Stripe…';
       try {
-        await Backend.saveOrder(order);
-        const r = await Backend.pay(order);
-        if (r.redirect) return;
-        if (r.demo) {
-          toast('Pedido guardado (demo)', order.ref + ' · conecta Stripe para cobrar', { ms: 6000 });
-          cart.clear();
-          setTimeout(() => { window.location.href = 'index.html'; }, 2200);
-        }
+        const r = await Backend.pay(payload);
+        window.location.href = r.url;
       } catch (err) {
-        toast('No se pudo completar', String(err.message || err).slice(0, 90), { icon: ICONS.shield });
+        toast('No se pudo iniciar el pago', String(err.message || err).slice(0, 120), { icon: ICONS.shield, ms: 7000 });
         btn.disabled = false; btn.innerHTML = 'Pagar ahora ' + ICONS.arrow;
       }
     });
+  }
+
+  /* ======================================================================
+     PEDIDO CONFIRMADO (pedido.html)
+     ====================================================================== */
+  async function initOrder() {
+    const root = $('#order-root');
+    if (!root) return;
+    const sid = qs('session_id');
+    if (!sid) {
+      root.innerHTML = `<p class="muted">No encontramos la referencia del pedido. Escríbenos y lo buscamos.</p>`;
+      return;
+    }
+    try {
+      const o = await Backend.order(sid);
+      const paid = o.payment_status === 'paid';
+      if (paid) cart.clear();
+      root.innerHTML = `
+        <div class="flex" style="align-items:center;gap:14px">
+          <span class="eyebrow" style="margin:0">${paid ? 'Pedido confirmado' : 'Pago pendiente'}</span>
+          <span class="mono muted" style="font-size:10px">${esc(o.id)}</span>
+        </div>
+        <h1 class="display mt-1 mb-3" style="font-size:clamp(38px,6vw,78px)">${paid ? 'Gracias' : 'Estamos en ello'}<em style="color:var(--clay)">.</em></h1>
+        <p class="muted" style="max-width:56ch">${paid
+          ? 'Hemos recibido tu pago y ya está en producción. Te enviamos la confirmación por email y el seguimiento en cuanto salga del taller (2-4 días + 3-6 de transporte).'
+          : 'Tu pedido está registrado pero el pago aún no se ha confirmado. Si acabas de pagar, actualiza en unos segundos.'}</p>
+        <div class="summary mt-4" style="max-width:520px">
+          <h3 class="display">Resumen</h3>
+          <div class="mt-2" style="display:grid;gap:10px">
+            ${(o.items || []).map(i => `<div class="totline"><span>${esc(i.name)} · ×${i.qty}</span><span class="v">${money(i.amount_cents / 100)}</span></div>`).join('')}
+          </div>
+          <hr class="hr mt-3 mb-2">
+          <div class="totline grand"><span class="display" style="font-size:20px">Total</span><span class="v" style="font-size:17px">${money((o.amount_total_cents || 0) / 100)}</span></div>
+          ${o.email ? `<p class="mono muted mt-3" style="font-size:9.5px">Confirmación a ${esc(o.email)}</p>` : ''}
+        </div>
+        <div class="flex mt-4">
+          <a class="btn" href="shop.html">Seguir comprando ${ICONS.arrow}</a>
+          <a class="btn btn--ghost" href="envios-devoluciones.html">Envíos y devoluciones</a>
+        </div>`;
+    } catch (err) {
+      root.innerHTML = `<h1 class="display" style="font-size:clamp(34px,5vw,60px)">No encontramos el pedido</h1>
+        <p class="muted mt-2">${esc(String(err.message || err))}</p>
+        <a class="btn mt-3" href="index.html">Volver al inicio</a>`;
+    }
   }
 
   /* ======================================================================
@@ -468,7 +478,7 @@
       try {
         const r = await Backend.subscribe(email);
         msg.className = 'form-msg ok';
-        msg.textContent = r.demo ? '¡Dentro! (demo local — conecta Supabase para guardarlo)' : '¡Dentro! Bienvenido a GZS.';
+        msg.textContent = '¡Dentro! Bienvenido a GZS.';
         input.value = '';
       } catch (err) {
         msg.className = 'form-msg err';
@@ -489,6 +499,7 @@
       else if (page === 'product') await initProduct();
       else if (page === 'cart') initCart();
       else if (page === 'checkout') initCheckout();
+      else if (page === 'order') await initOrder();
     } catch (err) {
       console.error('[GZS]', err);
     }

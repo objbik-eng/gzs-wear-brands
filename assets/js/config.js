@@ -30,31 +30,28 @@ window.GZS_CONFIG = {
   },
 
   /* ------------------------------------------------------------------
-     STRIPE — pendiente de integrar.
-     1) Crea la cuenta en https://dashboard.stripe.com
-     2) Pega aquí la clave publicable (pk_live_… o pk_test_…)
-     3) Para cobros reales hace falta un backend (Checkout Session):
-        mira el README.md, sección «Integrar Stripe».
+     STRIPE — ACTIVO (live).
+     La clave publicable es pública por diseño; la secreta vive sólo en
+     variables de entorno de Vercel (STRIPE_SECRET_KEY) y nunca en el repo.
      ------------------------------------------------------------------ */
   stripe: {
-    enabled: false,
-    publishableKey: '',
-    // endpoint del backend que crea la sesión de pago (Checkout):
-    // p. ej. 'https://tu-proyecto.supabase.co/functions/v1/create-checkout-session'
-    checkoutEndpoint: '',
+    enabled: true,
+    publishableKey: 'pk_live_51URWGT6Ez3lleHYiWh9ROqrewAictOYYzjrovcFhrcCZBmcDxUkyZxxwKHOUWiUnAk30xxwLvRxuTZK7Dijqo0TO00L6h3yiv4',
+    checkoutEndpoint: 'https://gzs-wear-brands.vercel.app/api/checkout',   // función serverless (Vercel) que crea la Checkout Session
+    orderEndpoint: 'https://gzs-wear-brands.vercel.app/api/order',         // resumen del pedido para la página de gracias
   },
 
   /* ------------------------------------------------------------------
-     SUPABASE — pendiente de integrar (pedidos, newsletter, stock).
-     1) Crea el proyecto en https://supabase.com
-     2) Pega URL y anon key
-     3) Ejecuta el SQL del README (tablas orders / subscribers)
+     SUPABASE — ACTIVO (pedidos, newsletter y control de stock).
+     Los pedidos se escriben desde el servidor con la clave secreta;
+     el navegador sólo usa la clave publicable para leer stock.
      ------------------------------------------------------------------ */
   supabase: {
-    enabled: false,
-    url: '',            // 'https://xxxx.supabase.co'
-    anonKey: '',        // anon public key
-    tables: { orders: 'orders', subscribers: 'subscribers' },
+    enabled: true,
+    url: 'https://apsqrzhvrlcnkffmaovt.supabase.co',
+    anonKey: 'sb_publishable_pD_UQcIoGf7UsvzlbD1LXg_yC7AvtAu',
+    newsletterEndpoint: 'https://gzs-wear-brands.vercel.app/api/newsletter',
+    tables: { orders: 'orders', subscribers: 'newsletter' },
   },
 
   analytics: {

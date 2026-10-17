@@ -1,0 +1,9 @@
+{
+  "name": "gzs-wear-brands",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync-precios": "node scripts/sync-precios.mjs"
+  }
+}
