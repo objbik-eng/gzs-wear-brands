@@ -10,6 +10,7 @@ export default async function handler(req, res) {
     stripe: { configurado: stripeConfigured() },
     supabase: { configurado: supabaseConfigured(), conexion: null, filas_stock: null },
     webhook: Boolean(process.env.STRIPE_WEBHOOK_SECRET),
+    printify: { configurado: Boolean(process.env.PRINTIFY_TOKEN) },
     site_url: process.env.SITE_URL || null,
   };
   if (stripeConfigured()) {
