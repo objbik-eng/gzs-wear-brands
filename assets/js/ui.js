@@ -106,8 +106,8 @@
             <a class="brand" style="color:var(--bone)" href="index.html">GZS<span class="dot"></span><small style="color:rgba(241,235,225,.5)">WEAR BRANDS</small></a>
             <p>${esc(cfg.brand.tagline)} Streetwear minimal de edición limitada. Series cortas, algodón pesado y piezas hechas para durar.</p>
             <div class="footer-social">
-              <a href="${cfg.brand.instagram}" aria-label="Instagram" target="_blank" rel="noopener">${ICONS.ig}</a>
-              <a href="${cfg.brand.tiktok}" aria-label="TikTok" target="_blank" rel="noopener">${ICONS.tt}</a>
+              ${cfg.brand.instagram ? `<a href="${cfg.brand.instagram}" aria-label="Instagram" target="_blank" rel="noopener">${ICONS.ig}</a>` : ''}
+              ${cfg.brand.tiktok ? `<a href="${cfg.brand.tiktok}" aria-label="TikTok" target="_blank" rel="noopener">${ICONS.tt}</a>` : ''}
               <a href="mailto:${cfg.brand.email}" aria-label="Email">${ICONS.mail}</a>
             </div>
           </div>

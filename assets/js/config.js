@@ -7,9 +7,9 @@ window.GZS_CONFIG = {
     name: 'GZS WEAR BRANDS',
     tagline: 'No es solo ropa. Es tu nueva identidad.',
     collection: 'Colección 001',
-    email: 'hola@gzswear.gazetastudio.com',      // ← cambia por tu email real
-    instagram: 'https://www.instagram.com/',      // ← pon tu @ real
-    tiktok: 'https://www.tiktok.com/',
+    email: 'hola@gzswear.gazetastudio.com',      // ← PENDIENTE: email real de atención al cliente
+    instagram: '',                               // ← PENDIENTE: URL real (vacío = no se muestra)
+    tiktok: '',                                  // ← PENDIENTE: URL real (vacío = no se muestra)
   },
 
   currency: 'EUR',
