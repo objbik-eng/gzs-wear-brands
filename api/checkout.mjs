@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         product_data: {
           name: l.name,
           description: [l.color, l.size].filter(Boolean).join(' · ') || undefined,
-          metadata: { product_id: l.product_id, slug: l.slug },
+          metadata: { product_id: l.product_id, slug: l.slug, color: l.color || '', size: l.size || '' },
         },
       },
     }));

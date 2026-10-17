@@ -1,6 +1,8 @@
 /* POST /api/stripe-webhook — Edge runtime (necesita el cuerpo crudo para verificar la firma).
    Eventos: checkout.session.completed, checkout.session.async_payment_succeeded, charge.refunded */
 
+import { crearPedidoBorrador } from './_printify.mjs';
+
 export const config = { runtime: 'edge' };
 
 const STRIPE_API = 'https://api.stripe.com/v1';
@@ -68,8 +70,11 @@ async function guardarPedido(session) {
     product_id: li.price?.product?.metadata?.product_id || '',
     name: li.description || li.price?.product?.name || 'Artículo',
     qty: li.quantity,
+    color: li.price?.product?.metadata?.color || '',
+    size: li.price?.product?.metadata?.size || '',
     unit_price_cents: cents(li.price?.unit_amount) || Math.round(cents(li.amount_total) / Math.max(1, li.quantity)),
   })).filter((i) => i.product_id);
+  session._items = items;
 
   const meta = session.metadata || {};
   const fila = {
@@ -146,7 +151,24 @@ export default async function handler(request) {
       const s = event.data.object;
       if (s.payment_status === 'paid' || event.type === 'checkout.session.async_payment_succeeded') {
         const completo = await stripeGet(`/checkout/sessions/${s.id}?expand[]=line_items`);
-        await guardarPedido(completo);
+        const r = await guardarPedido(completo);
+        if (r?.id && !r.duplicado) {
+          try {
+            const pr = await crearPedidoBorrador({
+              sessionId: completo.id,
+              email: completo.customer_details?.email || completo.customer_email,
+              nombre: completo.customer_details?.name || completo.metadata?.cliente,
+              telefono: completo.customer_details?.phone || completo.metadata?.telefono,
+              direccion: completo.shipping_details?.address || null,
+              items: completo._items || [],
+            });
+            if (pr?.id) {
+              await sb(`orders?id=eq.${r.id}`, {
+                method: 'PATCH', body: { printify_order_id: pr.id }, prefer: 'return=minimal',
+              });
+            }
+          } catch (e) { console.error('printify', e.message); }
+        }
       }
     } else if (event.type === 'charge.refunded') {
       const pi = event.data.object.payment_intent;
