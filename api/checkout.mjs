@@ -5,7 +5,7 @@
 
 import PRICES from './_prices.mjs';
 import {
-  json, stripe, computeTotals, fetchStock, supabaseConfigured,
+  cors, json, stripe, computeTotals, fetchStock, supabaseConfigured,
   SITE_URL, ALLOWED_COUNTRIES, HttpError,
 } from './_lib.mjs';
 
