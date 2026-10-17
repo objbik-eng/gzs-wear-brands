@@ -590,3 +590,57 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
   .cart-line{grid-template-columns:84px 1fr;gap:14px;}
   .cart-line .im{width:84px;height:106px;}
 }
+
+/* ------------------------------------------------------------------
+   FICHA DEL TITULAR + realces de las páginas legales
+   ------------------------------------------------------------------ */
+.card-titular{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--r,14px);
+  padding:clamp(18px,2.4vw,26px);
+  margin:22px 0 34px;
+  position:relative;
+  overflow:hidden;
+}
+.card-titular::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--clay),transparent 85%);
+}
+.ct-head{
+  font-family:var(--mono,ui-monospace,monospace);
+  text-transform:uppercase;letter-spacing:.16em;
+  font-size:9.5px;color:var(--clay);margin-bottom:14px;
+}
+.ct-row{
+  display:grid;grid-template-columns:118px 1fr;gap:14px;
+  padding:10px 0;border-top:1px solid var(--line);
+  align-items:baseline;
+}
+.ct-row:first-of-type{border-top:0;}
+.ct-row span{
+  font-family:var(--mono,ui-monospace,monospace);
+  font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-60);
+}
+.ct-row b{font-weight:500;font-size:14px;line-height:1.5;color:var(--ink);}
+.ct-row b a{text-decoration:underline;text-underline-offset:3px;}
+
+.prose .note-brand{
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin:18px 0;
+  font-size:14px;line-height:1.7;color:var(--ink-80);
+}
+.prose .note-brand b{color:var(--ink);}
+.prose .steps{counter-reset:s;list-style:none;padding:0;margin:16px 0;display:grid;gap:10px;}
+.prose .steps li{
+  counter-increment:s;position:relative;padding-left:38px;font-size:14px;line-height:1.6;
+}
+.prose .steps li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1px;
+  font-family:var(--mono,ui-monospace,monospace);font-size:9.5px;letter-spacing:.1em;
+  color:var(--clay);border:1px solid var(--line);border-radius:999px;
+  width:24px;height:24px;display:grid;place-items:center;
+}
+@media(max-width:560px){
+  .ct-row{grid-template-columns:1fr;gap:3px;}
+}

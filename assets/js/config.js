@@ -7,7 +7,7 @@ window.GZS_CONFIG = {
     name: 'GZS WEAR BRANDS',
     tagline: 'No es solo ropa. Es tu nueva identidad.',
     collection: 'Colección 001',
-    email: 'hola@gzswear.gazetastudio.com',      // ← PENDIENTE: email real de atención al cliente
+    email: 'gzswear@roadshop.online',
     instagram: '',                               // ← PENDIENTE: URL real (vacío = no se muestra)
     tiktok: '',                                  // ← PENDIENTE: URL real (vacío = no se muestra)
   },
