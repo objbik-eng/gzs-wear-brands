@@ -183,8 +183,10 @@ export const MAP = {
  }
 };
 
-/* Crea un pedido en Printify en estado BORRADOR (no se fabrica ni se cobra
-   hasta que lo revises y le des a "Enviar a producción"). */
+/* Crea el pedido en Printify y LO ENVÍA A PRODUCCIÓN automáticamente
+   (send_to_production: true). Excepción de seguridad: si alguna línea no
+   tiene variante mapeada, el pedido se queda en borrador para revisión
+   manual en vez de producirse incompleto. */
 export async function crearPedidoBorrador({ sessionId, email, nombre, telefono, direccion, items }) {
   const token = process.env.PRINTIFY_TOKEN;
   if (!token) return { skipped: 'PRINTIFY_TOKEN no configurado' };
@@ -205,7 +207,10 @@ export async function crearPedidoBorrador({ sessionId, email, nombre, telefono, 
     line_items.push({ product_id: p.printify_id, variant_id: vid, quantity: it.qty });
   }
   if (!line_items.length) return { skipped: 'sin variantes válidas', sinMapear };
-  if (sinMapear.length) console.error('printify: sin mapear', sinMapear);
+  if (sinMapear.length) console.error('printify: SIN MAPEAR -> pedido en borrador:', sinMapear);
+  // Producción automática activada por defecto. Se puede apagar sin tocar código
+  // poniendo PRINTIFY_AUTO_PRODUCTION=false en Vercel (vuelve a borrador).
+  const aProduccion = sinMapear.length === 0 && process.env.PRINTIFY_AUTO_PRODUCTION !== 'false';
 
   const partes = String(nombre || '').trim().split(/\s+/);
   const body = {
@@ -213,7 +218,7 @@ export async function crearPedidoBorrador({ sessionId, email, nombre, telefono, 
     label: `GZS ${String(sessionId).slice(-8)}`,
     line_items,
     shipping_method: 1,
-    send_to_production: false,          // ← borrador: lo revisas tú
+    send_to_production: aProduccion,    // ← automático; sólo baja a borrador si falta alguna variante
     address_to: {
       first_name: partes[0] || 'Cliente',
       last_name: partes.slice(1).join(' ') || '-',
@@ -235,5 +240,5 @@ export async function crearPedidoBorrador({ sessionId, email, nombre, telefono, 
   });
   const data = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(`Printify ${r.status}: ${JSON.stringify(data).slice(0, 200)}`);
-  return { id: data.id, estado: data.status, sinMapear };
+  return { id: data.id, estado: data.status, aProduccion, sinMapear };
 }

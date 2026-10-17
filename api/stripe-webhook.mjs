@@ -164,7 +164,12 @@ export default async function handler(request) {
             });
             if (pr?.id) {
               await sb(`orders?id=eq.${r.id}`, {
-                method: 'PATCH', body: { printify_order_id: pr.id }, prefer: 'return=minimal',
+                method: 'PATCH',
+                body: {
+                  printify_order_id: pr.id,
+                  printify_status: pr.aProduccion ? 'in-production' : 'draft-review',
+                },
+                prefer: 'return=minimal',
               });
             }
           } catch (e) { console.error('printify', e.message); }
