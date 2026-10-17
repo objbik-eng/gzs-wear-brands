@@ -165,7 +165,7 @@
     document.title = `${p.name} — ${cfg.brand.name}`;
     const crumb = $('#crumb-name'); if (crumb) crumb.textContent = p.name;
 
-    const sel = { color: (p.colorsUI[0] || {}).name || '', size: '' };
+    const sel = { color: (p.colorsUI[0] || {}).name || '', colorRaw: (p.colorsUI[0] || {}).raw || '', size: '' };
 
     root.innerHTML = `
       <div class="pdp-gallery reveal">
@@ -245,6 +245,8 @@
     /* color / talla / cantidad */
     $$('.swatch').forEach(s => s.addEventListener('click', () => {
       sel.color = s.dataset.color;
+      const cl = p.colorsUI.find(c => c.name === sel.color);
+      sel.colorRaw = (cl && cl.raw) || sel.color;
       $$('.swatch').forEach(x => x.classList.toggle('is-on', x === s));
       $('#opt-color').textContent = sel.color;
     }));
@@ -258,7 +260,7 @@
 
     $('#add-to-cart').addEventListener('click', () => {
       if (p.sizes.length && !sel.size) { toast('Elige una talla', 'Antes de añadir al carrito', { icon: ICONS.shield }); return; }
-      cart.add({ id: p.id, slug: p.slug, name: p.name, price: p.price, image: p.images[0], color: sel.color, size: sel.size }, q);
+      cart.add({ id: p.id, slug: p.slug, name: p.name, price: p.price, image: p.images[0], color: sel.color, colorRaw: sel.colorRaw, size: sel.size }, q);
       toast('Añadido al carrito', `${p.name} · ${[sel.color, sel.size].filter(Boolean).join(' · ')} × ${q}`, {
         ms: 4500, action: 'Ver carrito', onAction: () => window.GZS.ui.openDrawer()
       });
@@ -403,7 +405,7 @@
 
       const data = Object.fromEntries(new FormData(form).entries());
       const payload = {
-        items: cart.items.map(i => ({ id: i.id, qty: i.qty, color: i.color || '', size: i.size || '' })),
+        items: cart.items.map(i => ({ id: i.id, qty: i.qty, color: i.colorRaw || i.color || '', colorLabel: i.color || '', size: i.size || '' })),
         promo: promo || '',
         customer: { email: data.email, name: data.nombre, phone: data.telefono || '' },
         consent: form.querySelector('input[type=checkbox][required]')?.checked === true,

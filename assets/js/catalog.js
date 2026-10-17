@@ -55,8 +55,9 @@
     /* Añadir rápido: usa la primera talla/color disponible */
     quickAdd(p) {
       const color = (p.colorsUI[0] || {}).name || '';
+      const colorRaw = (p.colorsUI[0] || {}).raw || color;
       const size = p.sizes.length ? p.sizes[Math.min(1, p.sizes.length - 1)] : '';
-      cart.add({ id: p.id, slug: p.slug, name: p.name, price: p.price, image: p.images[0], color, size }, 1);
+      cart.add({ id: p.id, slug: p.slug, name: p.name, price: p.price, image: p.images[0], color, colorRaw, size }, 1);
       toast('Añadido al carrito', `${p.name} · ${[color, size].filter(Boolean).join(' · ')}`, {
         ms: 4200, action: 'Ver carrito', onAction: () => window.GZS.ui.openDrawer()
       });

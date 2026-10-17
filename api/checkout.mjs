@@ -37,7 +37,7 @@ export default async function handler(req, res) {
         unit_amount: l.unit_price_cents,
         product_data: {
           name: l.name,
-          description: [l.color, l.size].filter(Boolean).join(' · ') || undefined,
+          description: [l.colorLabel || l.color, l.size].filter(Boolean).join(' · ') || undefined,
           metadata: { product_id: l.product_id, slug: l.slug, color: l.color || '', size: l.size || '' },
         },
       },

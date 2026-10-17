@@ -151,6 +151,7 @@ export function computeTotals(rawItems, promoCode, catalog, stockMap = null) {
       throw new HttpError(409, `${prod.name}: sólo quedan ${stockMap[it.id]} unidades`);
     }
     const color = typeof it.color === 'string' ? it.color.slice(0, 40) : '';
+    const colorLabel = typeof it.colorLabel === 'string' ? it.colorLabel.slice(0, 40) : '';
     const size = typeof it.size === 'string' ? it.size.slice(0, 12) : '';
     lines.push({
       product_id: it.id,
@@ -159,6 +160,7 @@ export function computeTotals(rawItems, promoCode, catalog, stockMap = null) {
       unit_price_cents: prod.price_cents,
       qty,
       color,
+      colorLabel,
       size,
     });
   }

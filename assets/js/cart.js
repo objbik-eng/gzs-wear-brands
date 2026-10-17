@@ -28,7 +28,8 @@
       if (found) found.qty = Math.min(99, found.qty + qty);
       else items.push({
         id: item.id, slug: item.slug, name: item.name, price: item.price,
-        image: item.image, color: item.color || '', size: item.size || '', qty
+        image: item.image, color: item.color || '', colorRaw: item.colorRaw || item.color || '',
+        size: item.size || '', qty
       });
       write(items);
       return items;
