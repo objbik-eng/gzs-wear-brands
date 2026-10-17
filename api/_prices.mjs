@@ -259,7 +259,7 @@ export default {
       "price_cents": 2490,
       "cat": "Accesorios",
       "sizes": [
-        "33×33 in"
+        "33×33 cm"
       ],
       "colors": [
         "Black",

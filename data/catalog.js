@@ -705,7 +705,7 @@ window.GZS_CATALOG = {
     "Navy"
    ],
    "sizes": [
-    "33×33 in"
+    "33×33 cm"
    ],
    "images": [
     "assets/img/products/tote-urban-calm-1.webp",
