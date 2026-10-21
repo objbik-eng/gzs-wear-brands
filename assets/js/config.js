@@ -36,7 +36,7 @@ window.GZS_CONFIG = {
      ------------------------------------------------------------------ */
   stripe: {
     enabled: true,
-    publishableKey: 'pk_live_51URWGT6Ez3lleHYiWh9ROqrewAictOYYzjrovcFhrcCZBmcDxUkyZxxwKHOUWiUnAk30xxwLvRxuTZK7Dijqo0TO00L6h3yiv4',
+    publishableKey: 'pk_live_51U5pJdGLo0cfGfuXU4cR5tUuHnxcx8O4SiStnJ2X8mEmaqKIc6D1Xm5c6CHekZxCK56mBUdVsNJ2l406gv5NqzdO00Wm606hiv',
     checkoutEndpoint: 'https://gzs-wear-brands.vercel.app/api/checkout',   // función serverless (Vercel) que crea la Checkout Session
     orderEndpoint: 'https://gzs-wear-brands.vercel.app/api/order',         // resumen del pedido para la página de gracias
   },
