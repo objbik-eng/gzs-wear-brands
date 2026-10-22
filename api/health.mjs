@@ -11,6 +11,7 @@ export default async function handler(req, res) {
     supabase: { configurado: supabaseConfigured(), conexion: null, filas_stock: null },
     webhook: Boolean(process.env.STRIPE_WEBHOOK_SECRET),
     printify: { configurado: Boolean(process.env.PRINTIFY_TOKEN) },
+    correo: { resend_configurado: Boolean(process.env.RESEND_API_KEY), envios_activos: process.env.EMAILS_ENABLED === 'true' },
     site_url: process.env.SITE_URL || null,
   };
   if (stripeConfigured()) {

@@ -438,6 +438,20 @@
       const o = await Backend.order(sid);
       const paid = o.payment_status === 'paid';
       if (paid) cart.clear();
+      const stateNames = {
+        submitted: 'Pedido enviado al taller',
+        'in-production': 'En producción',
+        shipped: 'Enviado',
+        delivered: 'Entregado',
+        'draft-review': 'En revisión',
+      };
+      const fulfillment = stateNames[o.fulfillment_status] || (paid ? 'Pago confirmado · preparando pedido' : 'Esperando confirmación del pago');
+      const trackingRows = (o.tracking_info || []).map(t => {
+        const number = esc(t.tracking_number || '');
+        const carrier = esc(t.carrier || 'Transportista');
+        const url = /^https:\/\//i.test(t.tracking_url || '') ? esc(t.tracking_url) : '';
+        return `<li>${carrier}${number ? ` · ${number}` : ''}${url ? ` · <a href="${url}" target="_blank" rel="noopener">Ver seguimiento ↗</a>` : ''}</li>`;
+      }).join('');
       root.innerHTML = `
         <div class="flex" style="align-items:center;gap:14px">
           <span class="eyebrow" style="margin:0">${paid ? 'Pedido confirmado' : 'Pago pendiente'}</span>
@@ -445,8 +459,9 @@
         </div>
         <h1 class="display mt-1 mb-3" style="font-size:clamp(38px,6vw,78px)">${paid ? 'Gracias' : 'Estamos en ello'}<em style="color:var(--clay)">.</em></h1>
         <p class="muted" style="max-width:56ch">${paid
-          ? 'Hemos recibido tu pago y ya está en producción. Te enviamos la confirmación por email y el seguimiento en cuanto salga del taller (2-4 días + 3-6 de transporte).'
+          ? 'Hemos recibido tu pago. Aquí puedes consultar el estado del pedido; el seguimiento aparecerá en cuanto Printify lo facilite.'
           : 'Tu pedido está registrado pero el pago aún no se ha confirmado. Si acabas de pagar, actualiza en unos segundos.'}</p>
+        ${paid ? `<div class="note-brand mt-3" style="max-width:520px"><b>Estado:</b> ${esc(fulfillment)}${trackingRows ? `<ul class="mt-2">${trackingRows}</ul>` : ''}</div>` : ''}
         <div class="summary mt-4" style="max-width:520px">
           <h3 class="display">Resumen</h3>
           <div class="mt-2" style="display:grid;gap:10px">
@@ -454,7 +469,7 @@
           </div>
           <hr class="hr mt-3 mb-2">
           <div class="totline grand"><span class="display" style="font-size:20px">Total</span><span class="v" style="font-size:17px">${money((o.amount_total_cents || 0) / 100)}</span></div>
-          ${o.email ? `<p class="mono muted mt-3" style="font-size:9.5px">Confirmación a ${esc(o.email)}</p>` : ''}
+          ${o.email ? `<p class="mono muted mt-3" style="font-size:9.5px">Email usado: ${esc(o.email)}</p>` : ''}
         </div>
         <div class="flex mt-4">
           <a class="btn" href="shop.html">Seguir comprando ${ICONS.arrow}</a>

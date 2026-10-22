@@ -28,6 +28,7 @@ export const ALLOWED_ORIGINS = [
   'https://gzs-wear-brands.vercel.app',
   'https://gzs-wear-brands-gzs-wear.vercel.app',
   'https://objbik-eng.github.io',
+  'https://gzswear.roadshop.online',
 ];
 
 /** Añade cabeceras CORS si el origen está en la lista blanca. */

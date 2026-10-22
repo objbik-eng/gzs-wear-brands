@@ -74,6 +74,7 @@ export default async function handler(req, res) {
         envio_cents: String(t.shipping),
       },
       payment_intent_data: {
+        receipt_email: email, // Stripe envía el recibo de pago a este email aunque el ajuste global esté apagado.
         description: 'GZS WEAR BRANDS — Colección 001',
         metadata: { origen: 'web', promo: t.promo?.code || '' },
       },

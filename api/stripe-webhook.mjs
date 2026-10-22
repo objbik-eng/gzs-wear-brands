@@ -2,6 +2,7 @@
    Eventos: checkout.session.completed, checkout.session.async_payment_succeeded, charge.refunded */
 
 import { crearPedidoBorrador } from './_printify.mjs';
+import { sendOrderConfirmation } from './_mail.mjs';
 
 export const config = { runtime: 'edge' };
 
@@ -101,7 +102,7 @@ async function guardarPedido(session) {
       body: { ...fila },
       prefer: 'return=minimal',
     });
-    if (existente[0].status === 'paid') return { duplicado: true };
+    if (existente[0].status === 'paid') return { id: existente[0].id, duplicado: true };
     const orderId = existente[0].id;
     await insertarItems(orderId, items);
     await descontarStock(items);
@@ -167,12 +168,35 @@ export default async function handler(request) {
                 method: 'PATCH',
                 body: {
                   printify_order_id: pr.id,
-                  printify_status: pr.aProduccion ? 'in-production' : 'draft-review',
+                  printify_status: pr.aProduccion ? 'submitted' : 'draft-review',
+                  fulfillment_status: pr.aProduccion ? 'submitted' : 'draft-review',
                 },
                 prefer: 'return=minimal',
               });
             }
           } catch (e) { console.error('printify', e.message); }
+        }
+        if (process.env.EMAILS_ENABLED === 'true' && r?.id) {
+          const rows = await sb(`orders?id=eq.${r.id}&select=id,email,customer_name,confirmation_email_sent_at`);
+          const order = rows?.[0];
+          if (order && !order.confirmation_email_sent_at) {
+            try {
+              await sendOrderConfirmation({
+                to: order.email || completo.customer_details?.email || completo.customer_email,
+                name: order.customer_name || completo.customer_details?.name || completo.metadata?.cliente,
+                sessionId: completo.id,
+                items: completo._items || [],
+                totalCents: completo.amount_total,
+              });
+              await sb(`orders?id=eq.${r.id}`, {
+                method: 'PATCH', body: { confirmation_email_sent_at: new Date().toISOString(), email_last_error: null },
+                prefer: 'return=minimal',
+              });
+            } catch (e) {
+              await sb(`orders?id=eq.${r.id}`, { method: 'PATCH', body: { email_last_error: String(e.message).slice(0,500) }, prefer: 'return=minimal' }).catch(()=>{});
+              throw e; // Stripe reintenta el webhook; el alta de Printify no se repite.
+            }
+          }
         }
       }
     } else if (event.type === 'charge.refunded') {

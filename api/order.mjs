@@ -1,5 +1,5 @@
 /* GET /api/order?session_id=cs_... → resumen del pedido para la página de gracias. */
-import { cors, json, stripe, HttpError } from './_lib.mjs';
+import { cors, json, stripe, supabase, supabaseConfigured, HttpError } from './_lib.mjs';
 
 export default async function handler(req, res) {
   cors(req, res);
@@ -9,6 +9,13 @@ export default async function handler(req, res) {
     if (!/^cs_[A-Za-z0-9_]+$/.test(id)) throw new HttpError(400, 'Sesión no válida');
 
     const s = await stripe(`/checkout/sessions/${id}?expand[]=line_items`);
+    let fulfillment = {};
+    if (supabaseConfigured()) {
+      try {
+        const rows = await supabase(`orders?stripe_session_id=eq.${encodeURIComponent(id)}&select=fulfillment_status,tracking_info,printify_status`);
+        if (rows?.[0]) fulfillment = rows[0];
+      } catch { /* el resumen de Stripe sigue disponible si falla la consulta logística */ }
+    }
     return json(res, 200, {
       id: s.id,
       status: s.status,
@@ -18,6 +25,9 @@ export default async function handler(req, res) {
       amount_total_cents: s.amount_total,
       currency: s.currency,
       created: s.created,
+      fulfillment_status: fulfillment.fulfillment_status || null,
+      printify_status: fulfillment.printify_status || null,
+      tracking_info: Array.isArray(fulfillment.tracking_info) ? fulfillment.tracking_info : [],
       items: (s.line_items?.data || []).map((li) => ({
         name: li.description || li.price?.product?.name,
         qty: li.quantity,
