@@ -1,6 +1,5 @@
 /* POST /api/printify-webhook — actualiza estado y seguimiento desde Printify. */
 import { createHmac, timingSafeEqual } from 'node:crypto';
-import { sendShipmentNotification } from './_mail.mjs';
 
 export const config = { api: { bodyParser: false } };
 const SHOP_ID = '29311670';
@@ -79,15 +78,7 @@ export default async function handler(req,res){
       base.fulfillment_status='shipped';
       base.tracking_info=shipments;
       await sb(`orders?id=eq.${order.id}`,{method:'PATCH',body:base,prefer:'return=minimal'});
-      if(process.env.EMAILS_ENABLED==='true' && order.email && shipments.length){
-        try{
-          await sendShipmentNotification({to:order.email,name:order.customer_name,sessionId:order.stripe_session_id,shipments});
-          await sb(`orders?id=eq.${order.id}`,{method:'PATCH',body:{shipment_email_sent_at:new Date().toISOString(),email_last_error:null},prefer:'return=minimal'});
-        }catch(e){
-          await sb(`orders?id=eq.${order.id}`,{method:'PATCH',body:{email_last_error:String(e.message).slice(0,500)},prefer:'return=minimal'}).catch(()=>{});
-          throw e;
-        }
-      }
+      // Printify envía su propio email de tracking (send_shipping_notification=true); aquí guardamos el tracking para la página del pedido.
       return reply(res,200,{received:true,updated:'shipped',tracking_count:shipments.length});
     }
     if(topic==='order:updated'){

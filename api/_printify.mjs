@@ -218,6 +218,7 @@ export async function crearPedidoBorrador({ sessionId, email, nombre, telefono, 
     label: `GZS ${String(sessionId).slice(-8)}`,
     line_items,
     shipping_method: 1,
+    send_shipping_notification: true, // Printify envía el aviso de expedición y tracking al cliente.
     send_to_production: aProduccion,    // ← automático; sólo baja a borrador si falta alguna variante
     address_to: {
       first_name: partes[0] || 'Cliente',
