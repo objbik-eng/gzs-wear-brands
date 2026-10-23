@@ -1,6 +1,6 @@
 /* ==========================================================================
    GZS WEAR BRANDS — Sistema de diseño
-   Estética: editorial urbana, tierra + tinta, tipografía display con carácter
+   Estética: editorial urbana, rosa + azul, tipografía display con carácter
    ========================================================================== */
 
 /* ---------- Fuentes (locales, sin CDN) ---------- */
@@ -12,29 +12,29 @@
 
 /* ---------- Tokens ---------- */
 :root{
-  /* GRIS — base/fondo de toda la web */
-  --bone:#E3E0DA;          /* fondo de página */
-  /* BLANCO ROTO — tarjetas, bandas y paneles */
-  --paper:#F7F4EE;         /* superficie clara */
-  --white:#F7F4EE;
-  /* MARRÓN — color de marca (cartel URBAN) */
+  /* ROSA — base/fondo de toda la web */
+  --bone:#FFCEEC;          /* fondo de página */
+  /* BLANCO — color terciario: tarjetas y paneles */
+  --paper:#FFFFFF;         /* superficie clara */
+  --white:#FFFFFF;
+  /* TINTA — texto y contraste estructural */
   --ink:#302114;           /* fondo del cartel URBAN */
   --ink-80:rgba(48,33,20,.86);
-  --brown:#7A4E27;         /* marrón de acento visible */
-  /* GRIS — textos secundarios, bordes y superficies */
+  --brown:#65BEFF;         /* azul de acento */
+  /* NEUTROS — textos secundarios y bordes */
   --ink-60:#7B7771;        /* gris neutro */
   --ink-40:#A5A19B;        /* gris claro */
   --grey:#7B7771;
-  --grey-50:#F7F4EE;       /* bandas (marquee, newsletter, resumen) */
-  --grey-100:#E2DFDA;      /* superficie gris */
+  --grey-50:#65BEFF;       /* secundario: marquee, newsletter y resumen */
+  --grey-100:#65BEFF;      /* superficie secundaria */
   --line:rgba(123,119,113,.38);
   --line-strong:rgba(123,119,113,.58);
-  --camel:#7A4E27;
-  --clay:#7A4E27;
-  --sage:#7B7771;
-  --sand:#D9D4CB;          /* claro neutro sobre fondo marrón */
-  --stone:#F7F4EE;         /* fondo de tarjetas/miniaturas — BLANCO ROTO */
-  --on-dark:#F7F4EE;       /* texto sobre fondos marrones */
+  --camel:#65BEFF;
+  --clay:#65BEFF;
+  --sage:#65BEFF;
+  --sand:#FFFFFF;          /* blanco sobre fondos de tinta */
+  --stone:#FFFFFF;         /* fondo de tarjetas/miniaturas — BLANCO */
+  --on-dark:#FFFFFF;       /* texto sobre fondos de tinta */
   --ok:#3E6B4F;
   --bad:#A3392F;
 
@@ -129,7 +129,7 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
 .icon-btn svg{width:19px;height:19px;}
 .cart-count{
   position:absolute;top:3px;right:2px;min-width:17px;height:17px;padding:0 4px;
-  background:var(--clay);color:var(--white);border-radius:var(--r-pill);
+  background:var(--clay);color:var(--ink);border-radius:var(--r-pill);
   font-family:var(--f-mono);font-size:9.5px;display:grid;place-items:center;
   transform:scale(0);transition:transform .3s var(--ease);
 }
@@ -173,14 +173,14 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
 
 /* ---------- Marquee ---------- */
 .marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--grey-50);}
-.marquee--ink{background:var(--ink);color:var(--on-dark);border-color:rgba(246,241,232,.16);}
+.marquee--ink{background:var(--ink);color:var(--on-dark);border-color:rgba(255,255,255,.16);}
 .marquee-track{display:flex;gap:0;width:max-content;animation:slide 34s linear infinite;}
 .marquee:hover .marquee-track{animation-play-state:paused;}
 .marquee-track span{
   font-family:var(--f-display);font-size:clamp(18px,2.4vw,30px);font-weight:500;font-style:italic;
   padding:16px 26px;white-space:nowrap;display:flex;align-items:center;gap:26px;
 }
-.marquee-track span::after{content:"✳";font-style:normal;font-size:.7em;color:var(--camel);}
+.marquee-track span::after{content:"✳";font-style:normal;font-size:.7em;color:var(--white);}
 @keyframes slide{to{transform:translateX(-50%);}}
 
 /* ---------- Banner de marca (bajo el menú) ---------- */
@@ -226,7 +226,7 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
   font-family:var(--f-mono);font-size:8.5px;letter-spacing:.14em;line-height:1.7;text-transform:uppercase;
   box-shadow:var(--shadow-md);z-index:2;
 }
-.hero-sticker i{position:absolute;inset:6px;border:1px dashed rgba(246,241,232,.38);border-radius:50%;animation:spin 26s linear infinite;}
+.hero-sticker i{position:absolute;inset:6px;border:1px dashed rgba(255,255,255,.38);border-radius:50%;animation:spin 26s linear infinite;}
 .hero-sticker b{font-weight:400;padding:10px;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .hero-caption{
@@ -253,7 +253,7 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
   background:var(--bone);color:var(--ink);padding:5px 10px;border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
 }
 .badge--ink{background:var(--ink);color:var(--on-dark);}
-.badge--clay{background:var(--clay);color:var(--white);}
+.badge--clay{background:var(--clay);color:var(--ink);}
 .quick-add{
   position:absolute;left:12px;right:12px;bottom:12px;z-index:2;
   transform:translateY(140%);opacity:0;transition:transform .45s var(--ease), opacity .3s var(--ease);
@@ -336,7 +336,7 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
 .manifesto .big em{font-style:italic;color:var(--sand);}
 .manifesto .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px);margin-top:clamp(36px,5vw,64px);}
 .manifesto .cols h4{font-size:19px;margin-bottom:8px;}
-.manifesto .cols p{color:rgba(246,241,232,.66);font-size:14.5px;}
+.manifesto .cols p{color:rgba(255,255,255,.66);font-size:14.5px;}
 .manifesto .cols .n{font-family:var(--f-mono);font-size:10px;color:var(--sand);letter-spacing:.2em;display:block;margin-bottom:14px;}
 
 /* ---------- Newsletter ---------- */
@@ -481,7 +481,7 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
   display:flex;gap:12px;align-items:center;box-shadow:var(--shadow-lg);
   animation:toast-in .45s var(--ease);
 }
-.toast .ico{width:26px;height:26px;border-radius:50%;background:rgba(246,241,232,.14);display:grid;place-items:center;flex:none;}
+.toast .ico{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;flex:none;}
 .toast .t{font-size:14px;line-height:1.35;}
 .toast .t b{display:block;font-family:var(--f-display);font-weight:600;font-size:15px;}
 .toast .undo{margin-left:auto;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--sand);flex:none;}
@@ -501,22 +501,22 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.02;letter
 /* ---------- Footer ---------- */
 .site-footer{background:var(--ink);color:var(--on-dark);position:relative;overflow:hidden;}
 .footer-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,.55fr));gap:clamp(24px,3vw,48px);padding:clamp(48px,6vw,88px) 0 clamp(30px,4vw,48px);}
-.footer-top h4{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,241,232,.5);margin-bottom:16px;font-weight:400;}
-.footer-top a{color:rgba(246,241,232,.82);display:block;padding:5px 0;font-size:14.5px;transition:color .2s,transform .2s;width:fit-content;}
+.footer-top h4{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px;font-weight:400;}
+.footer-top a{color:rgba(255,255,255,.82);display:block;padding:5px 0;font-size:14.5px;transition:color .2s,transform .2s;width:fit-content;}
 .footer-top a:hover{color:var(--sand);transform:translateX(3px);}
-.footer-brand p{color:rgba(246,241,232,.6);max-width:34ch;margin-top:14px;font-size:14.5px;}
+.footer-brand p{color:rgba(255,255,255,.6);max-width:34ch;margin-top:14px;font-size:14.5px;}
 .footer-social{display:flex;gap:10px;margin-top:20px;}
-.footer-social a{width:40px;height:40px;border:1px solid rgba(246,241,232,.22);border-radius:50%;display:grid;place-items:center;transition:background .25s,transform .25s;}
-.footer-social a:hover{background:rgba(246,241,232,.1);transform:translateY(-3px);}
+.footer-social a{width:40px;height:40px;border:1px solid rgba(255,255,255,.22);border-radius:50%;display:grid;place-items:center;transition:background .25s,transform .25s;}
+.footer-social a:hover{background:rgba(255,255,255,.1);transform:translateY(-3px);}
 .footer-social svg{width:17px;height:17px;}
 .footer-giant{
   font-family:var(--f-display);font-weight:700;letter-spacing:-.04em;line-height:.8;text-align:center;
-  font-size:clamp(56px,16.5vw,252px);color:transparent;-webkit-text-stroke:1px rgba(246,241,232,.26);
+  font-size:clamp(56px,16.5vw,252px);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.26);
   padding:10px 0 0;white-space:nowrap;user-select:none;
 }
-.footer-bottom{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:space-between;align-items:center;padding:26px 0 34px;border-top:1px solid rgba(246,241,232,.14);color:rgba(246,241,232,.5);}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:space-between;align-items:center;padding:26px 0 34px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.5);}
 .pays{display:flex;gap:8px;align-items:center;}
-.pays span{border:1px solid rgba(246,241,232,.2);border-radius:6px;padding:4px 8px;font-family:var(--f-mono);font-size:8.5px;letter-spacing:.1em;}
+.pays span{border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:4px 8px;font-family:var(--f-mono);font-size:8.5px;letter-spacing:.1em;}
 
 /* ---------- Reveal ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
