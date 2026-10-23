@@ -103,7 +103,7 @@
       <div class="wrap">
         <div class="footer-top">
           <div class="footer-brand">
-            <a class="brand" style="color:var(--white)" href="index.html">GZS<span class="dot"></span><small style="color:rgba(255,255,255,.5)">WEAR BRANDS</small></a>
+            <a class="brand" style="color:var(--bone)" href="index.html">GZS<span class="dot"></span><small style="color:rgba(241,235,225,.5)">WEAR BRANDS</small></a>
             <p>${esc(cfg.brand.tagline)} Streetwear minimal de edición limitada. Series cortas, algodón pesado y piezas hechas para durar.</p>
             <div class="footer-social">
               ${cfg.brand.instagram ? `<a href="${cfg.brand.instagram}" aria-label="Instagram" target="_blank" rel="noopener">${ICONS.ig}</a>` : ''}
